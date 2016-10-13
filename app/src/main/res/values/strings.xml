@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name">OverSeer</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="genji_name">Genji</string>
+    <string name="offense_hero_type">Offense</string>
+    <string name="genji_icon_description">Genji Icon</string>
+    <string name="defense_hero_type">Defense</string>
+    <string name="tank_hero_type">Tank</string>
+    <string name="support_hero_type">Support</string>
+    <string name="mccree_name">Mccree</string>
+    <string name="mccree_icon_description">Mccree Icon</string>
+    <string name="pharah_icon_description">Pharah Icon</string>
+    <string name="pharah_name">Pharah</string>
+    <string name="reaper_icon_description">Reaper Icon</string>
+    <string name="reaper_name">Reaper</string>
+    <string name="soldier_icon_description">Soldier:76 Icon</string>
+    <string name="soldier_name">Soldier:76</string>
+    <string name="tracer_icon_description">Tracer Icon</string>
+    <string name="tracer_name">Tracer</string>
+    <string name="bastion_icon_description">Bastion Icon</string>
+    <string name="bastion_name">Bastion</string>
+    <string name="hanzo_icon_description">Hanzo Icon</string>
+    <string name="hanzo_name">Hanzo</string>
+    <string name="junkrat_icon_description">Junkrat Icon</string>
+    <string name="junkrat_name">Junkrat</string>
+    <string name="mei_icon_description">Mei Icon</string>
+    <string name="mei_name">Mei</string>
+    <string name="torbjorn_icon_description">Torbjorn Icon</string>
+    <string name="torbjorn_name">Torbjörn</string>
+    <string name="widowmaker_icon_description">Widowmaker Icon</string>
+    <string name="dva_icon_description">D.Va Icon</string>
+    <string name="dva_name">D.Va</string>
+    <string name="reinhardt_icon">Reinhardt Icon</string>
+    <string name="reinhardt_name">Reinhardt</string>
+    <string name="roadhog_icon_description">Roadhog Icon</string>
+    <string name="roadhog_name">Roadhog</string>
+    <string name="winston_icon_description">Winston Icon</string>
+    <string name="winston_name">Winston</string>
+    <string name="zarya_icon_description">Zarya Icon</string>
+    <string name="zarya_name">Zarya</string>
+    <string name="ana_icon_description">Ana Icon</string>
+    <string name="ana_name">Ana</string>
+    <string name="lucio_icon">Lúcio Icon</string>
+    <string name="lucio_name">Lúcio</string>
+    <string name="mercy_icon_description">Mercy Icon</string>
+    <string name="mercy_name">Mercy</string>
+    <string name="symmetra_icon_description">Symmetra Icon</string>
+    <string name="zenyatta_icon_description">Zenyatta Icon</string>
+    <string name="zenyatta_name">Zenyatta</string>
+    <string name="widowmaker_name">Widowmaker</string>
+    <string name="symmetra_name">Symmetra</string>
+    <string name="assault_map_type">Assault</string>
+    <string name="escort_map_type">Escort</string>
+    <string name="hybrid_map_type">Hybrid</string>
+    <string name="control_map_type">Control</string>
+    <string name="hanamura_description">Hanamura Map</string>
+    <string name="hanamura_name">Hanamura</string>
+    <string name="anubis_description">Temple of Anubis Map</string>
+    <string name="anubis_name">Temple of Anubis</string>
+    <string name="volskaya_industries_map">Volskaya Industries Map</string>
+    <string name="volskaya_name">Volskaya Industries</string>
+    <string name="dorado_description">Dorado Map</string>
+    <string name="dorado_name">Dorado</string>
+    <string name="route66_description">Route 66 Map</string>
+    <string name="route66_name">Route 66</string>
+    <string name="gibraltar_description">Watchpoint: Gibraltar Map</string>
+    <string name="gibraltar_name">Watchpoint: Gibraltar</string>
+    <string name="eichenwalde_description">Eichenwalde Map</string>
+    <string name="eichenwalde_name">Eichenwalde</string>
+    <string name="hollywood_description">Hollywood Map</string>
+    <string name="hollywood_name">Hollywood</string>
+    <string name="kingsrow_description">King\'s Row Map</string>
+    <string name="kingsrow_name">King\'s Row</string>
+    <string name="numbani_description">Numbani Map</string>
+    <string name="numbani_name">Numbani</string>
+    <string name="ilios_description">Ilios Map</string>
+    <string name="ilios_name">Ilios</string>
+    <string name="lijiang_description">Lijiang Tower Map</string>
+    <string name="lijiang_name">Lijiang Tower</string>
+    <string name="nepal_description">Nepal Map</string>
+    <string name="nepal_name">Nepal</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hero_tab_title">Heroes</string>
+    <string name="map_tab_title">Maps</string>
+    <string name="stats_tab_title">User Stats</string>
+    <string name="genji_age">Age: 35</string>
+
+    <string-array name="platforms">
+        <item>PC</item>
+        <item>XBOX</item>
+        <item>PSN</item>
+    </string-array>
+    <string-array name="regions">
+        <item>US</item>
+        <item>EU</item>
+        <item>KR</item>
+        <item>CN</item>
+        <item>GLOBAL</item>
+    </string-array>
+</resources>
