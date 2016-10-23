@@ -2,6 +2,8 @@ package apps.vinsa_000.overwatchhelper;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -33,7 +35,7 @@ public class HeroDetailActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hero_detail_layout);
+        setContentView(R.layout.activity_hero_detail);
 
         //Grab intent and heroNum
         intent = getIntent();
@@ -51,15 +53,17 @@ public class HeroDetailActivity extends AppCompatActivity{
         heroShield = (TextView)findViewById(R.id.hero_shield);
         heroTotal = (TextView)findViewById(R.id.hero_total);
 
+
         //Specify which hero to get data for using heroNum
         hero = new Hero(heroNum, this);
         //Set up hero's basic info
-        getBasicInfo();
+        setBasicInfo();
         //Set up hero's abilities list
         setUpAbilityListView();
     }
 
-    private void getBasicInfo(){
+    //Gets a certain hero's basic info and displays it
+    private void setBasicInfo(){
         ArrayList<String> heroBasicInfo = hero.getBasicInfo();
 
         heroName.setText("Name: " + heroBasicInfo.get(0));
@@ -81,7 +85,6 @@ public class HeroDetailActivity extends AppCompatActivity{
         }
         //Place in adapter
         AbilityListAdapter adapter = new AbilityListAdapter(this, heroInfo);
-
         //Tie adapter to listview
         listView.setAdapter(adapter);
     }
@@ -96,7 +99,7 @@ public class HeroDetailActivity extends AppCompatActivity{
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
             Hero currentHero = getItem(position);
-            ArrayList<String> primaryInfo = currentHero.getPrimaryInfo();
+            final ArrayList<String> primaryInfo = currentHero.getPrimaryInfo();
             ArrayList<String> secondaryInfo = currentHero.getSecondaryInfo();
             ArrayList<String> passiveInfo = currentHero.getPassiveInfo();
             ArrayList<String> skill1Info = currentHero.getSkill1Info();
@@ -111,82 +114,175 @@ public class HeroDetailActivity extends AppCompatActivity{
             ImageView image = (ImageView)convertView.findViewById(R.id.ability_icon);
             TextView name = (TextView)convertView.findViewById(R.id.ability_name);
             TextView description = (TextView)convertView.findViewById(R.id.ability_description);
+            final HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+            final Bundle bundle = new Bundle();
 
+            //Standardize width and height of image
+            image.getLayoutParams().width = 150;
+            image.getLayoutParams().height = 150;
+
+            final FragmentManager fm = getSupportFragmentManager();
             switch (position){
                 case 0:
                     if(!primaryInfo.isEmpty()){
-                        image.setImageResource(R.drawable.primary_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                bundle.clear();
+                                bundle.putStringArrayList( "Ability Info", primaryInfo);
+
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                FragmentTransaction ft = fm.beginTransaction();
+                                ft.add(R.id.fragment_container, innerFragment);
+                                ft.commit();
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(primaryInfo.get(2)));
                         name.setText(primaryInfo.get(0));
                         description.setText(primaryInfo.get(1));
                     }
                     break;
                 case 1:
                     if(!secondaryInfo.isEmpty()){
-                        image.setImageResource(R.drawable.primary_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(secondaryInfo.get(2)));
                         name.setText(secondaryInfo.get(0));
                         description.setText(secondaryInfo.get(1));
                     }
                     else if(!passiveInfo.isEmpty()){
-                        image.setImageResource(R.drawable.passive_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(passiveInfo.get(2)));
                         name.setText(passiveInfo.get(0));
                         description.setText(passiveInfo.get(1));
                     }
                     else{
-                        image.setImageResource(R.drawable.skill1_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill1Info.get(2)));
                         name.setText(skill1Info.get(0));
                         description.setText(skill1Info.get(1));
                     }
                     break;
                 case 2:
                     if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty()){
-                        image.setImageResource(R.drawable.passive_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(passiveInfo.get(2)));
                         name.setText(passiveInfo.get(0));
                         description.setText(passiveInfo.get(1));
                     }
                     else if((!secondaryInfo.isEmpty() && passiveInfo.isEmpty()) || (secondaryInfo.isEmpty() && !passiveInfo.isEmpty())){
-                        image.setImageResource(R.drawable.skill1_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill1Info.get(2)));
                         name.setText(skill1Info.get(0));
                         description.setText(skill1Info.get(1));
                     }
                     else{
-                        image.setImageResource(R.drawable.skill2_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill2info.get(2)));
                         name.setText(skill2info.get(0));
                         description.setText(skill2info.get(1));
                     }
                     break;
                 case 3:
+                    listItem.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                        }
+                    });
                     if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty()){
-                        image.setImageResource(R.drawable.skill1_genji);
+                        image.setImageResource(Integer.parseInt(skill1Info.get(2)));
                         name.setText(skill1Info.get(0));
                         description.setText(skill1Info.get(1));
                     }
                     else if((secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2info.isEmpty())
                             || (!secondaryInfo.isEmpty() && passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2info.isEmpty())
                             ||(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && skill1Info.isEmpty() && !skill2info.isEmpty())){
-                        image.setImageResource(R.drawable.skill2_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill2info.get(2)));
                         name.setText(skill2info.get(0));
                         description.setText(skill2info.get(1));
                     }
                     else if((secondaryInfo.isEmpty() && passiveInfo.isEmpty() && !skill2info.isEmpty())){
-                        image.setImageResource(R.drawable.ult_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(ultInfo.get(2)));
                         name.setText(ultInfo.get(0));
                         description.setText(ultInfo.get(1));
                     }
                     break;
                 case 4:
                     if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2info.isEmpty()){
-                        image.setImageResource(R.drawable.skill2_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill2info.get(2)));
                         name.setText(skill2info.get(0));
                         description.setText(skill2info.get(1));
                     }
                     else{
-                        image.setImageResource(R.drawable.ult_genji);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(ultInfo.get(2)));
                         name.setText(ultInfo.get(0));
                         description.setText(ultInfo.get(1));
                     }
                     break;
                 case 5:
-                    image.setImageResource(R.drawable.ult_genji);
+                    listItem.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                        }
+                    });
+                    image.setImageResource(Integer.parseInt(ultInfo.get(2)));
                     name.setText(ultInfo.get(0));
                     description.setText(ultInfo.get(1));
                     break;
