@@ -1,15 +1,26 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
     tools:context="apps.vinsa_000.overwatchhelper.HeroAbilityFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/test"
+        android:id="@+id/fragment_abilityTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="" />
-
-</FrameLayout>
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:textSize="30sp"
+        android:textColor="@color/colorText"/>
+    <TextView
+        android:id="@+id/fragment_abilityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="@color/colorText"/>
+</LinearLayout>

@@ -100,11 +100,11 @@ public class HeroDetailActivity extends AppCompatActivity{
         public View getView(int position, View convertView, ViewGroup parent){
             Hero currentHero = getItem(position);
             final ArrayList<String> primaryInfo = currentHero.getPrimaryInfo();
-            ArrayList<String> secondaryInfo = currentHero.getSecondaryInfo();
-            ArrayList<String> passiveInfo = currentHero.getPassiveInfo();
-            ArrayList<String> skill1Info = currentHero.getSkill1Info();
-            ArrayList<String> skill2info = currentHero.getSkill2Info();
-            ArrayList<String> ultInfo = currentHero.getUltInfo();
+            final ArrayList<String> secondaryInfo = currentHero.getSecondaryInfo();
+            final ArrayList<String> passiveInfo = currentHero.getPassiveInfo();
+            final ArrayList<String> skill1Info = currentHero.getSkill1Info();
+            final ArrayList<String> skill2Info = currentHero.getSkill2Info();
+            final ArrayList<String> ultInfo = currentHero.getUltInfo();
 
             if(convertView == null){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_listview, parent, false);
@@ -114,8 +114,6 @@ public class HeroDetailActivity extends AppCompatActivity{
             ImageView image = (ImageView)convertView.findViewById(R.id.ability_icon);
             TextView name = (TextView)convertView.findViewById(R.id.ability_name);
             TextView description = (TextView)convertView.findViewById(R.id.ability_description);
-            final HeroAbilityFragment innerFragment = new HeroAbilityFragment();
-            final Bundle bundle = new Bundle();
 
             //Standardize width and height of image
             image.getLayoutParams().width = 150;
@@ -128,20 +126,18 @@ public class HeroDetailActivity extends AppCompatActivity{
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                bundle.clear();
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
                                 bundle.putStringArrayList( "Ability Info", primaryInfo);
-
                                 innerFragment.setArguments(bundle);
 
                                 //Display HeroAbilityFragment
-                                FragmentTransaction ft = fm.beginTransaction();
-                                ft.add(R.id.fragment_container, innerFragment);
-                                ft.commit();
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(primaryInfo.get(2)));
-                        name.setText(primaryInfo.get(0));
-                        description.setText(primaryInfo.get(1));
+                        image.setImageResource(Integer.parseInt(primaryInfo.get(3)));
+                        name.setText(primaryInfo.get(1));
+                        description.setText(primaryInfo.get(2));
                     }
                     break;
                 case 1:
@@ -149,34 +145,51 @@ public class HeroDetailActivity extends AppCompatActivity{
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", secondaryInfo);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(secondaryInfo.get(2)));
-                        name.setText(secondaryInfo.get(0));
-                        description.setText(secondaryInfo.get(1));
+                        image.setImageResource(Integer.parseInt(secondaryInfo.get(3)));
+                        name.setText(secondaryInfo.get(1));
+                        description.setText(secondaryInfo.get(2));
                     }
                     else if(!passiveInfo.isEmpty()){
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", passiveInfo);
+                                innerFragment.setArguments(bundle);
 
-                            }
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");}
                         });
-                        image.setImageResource(Integer.parseInt(passiveInfo.get(2)));
-                        name.setText(passiveInfo.get(0));
-                        description.setText(passiveInfo.get(1));
+                        image.setImageResource(Integer.parseInt(passiveInfo.get(3)));
+                        name.setText(passiveInfo.get(1));
+                        description.setText(passiveInfo.get(2));
                     }
                     else{
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill1Info);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(skill1Info.get(2)));
-                        name.setText(skill1Info.get(0));
-                        description.setText(skill1Info.get(1));
+                        image.setImageResource(Integer.parseInt(skill1Info.get(3)));
+                        name.setText(skill1Info.get(1));
+                        description.setText(skill1Info.get(2));
                     }
                     break;
                 case 2:
@@ -184,107 +197,161 @@ public class HeroDetailActivity extends AppCompatActivity{
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", passiveInfo);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(passiveInfo.get(2)));
-                        name.setText(passiveInfo.get(0));
-                        description.setText(passiveInfo.get(1));
+                        image.setImageResource(Integer.parseInt(passiveInfo.get(3)));
+                        name.setText(passiveInfo.get(1));
+                        description.setText(passiveInfo.get(2));
                     }
                     else if((!secondaryInfo.isEmpty() && passiveInfo.isEmpty()) || (secondaryInfo.isEmpty() && !passiveInfo.isEmpty())){
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill1Info);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(skill1Info.get(2)));
-                        name.setText(skill1Info.get(0));
-                        description.setText(skill1Info.get(1));
+                        image.setImageResource(Integer.parseInt(skill1Info.get(3)));
+                        name.setText(skill1Info.get(1));
+                        description.setText(skill1Info.get(2));
                     }
                     else{
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill2Info);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(skill2info.get(2)));
-                        name.setText(skill2info.get(0));
-                        description.setText(skill2info.get(1));
+                        image.setImageResource(Integer.parseInt(skill2Info.get(3)));
+                        name.setText(skill2Info.get(1));
+                        description.setText(skill2Info.get(2));
                     }
                     break;
                 case 3:
                     listItem.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                            Bundle bundle = new Bundle();
+                            bundle.putStringArrayList( "Ability Info", skill1Info);
+                            innerFragment.setArguments(bundle);
 
+                            //Display HeroAbilityFragment
+                            innerFragment.show(fm, "fragment_hero_ability");
                         }
                     });
                     if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty()){
-                        image.setImageResource(Integer.parseInt(skill1Info.get(2)));
-                        name.setText(skill1Info.get(0));
-                        description.setText(skill1Info.get(1));
+                        image.setImageResource(Integer.parseInt(skill1Info.get(3)));
+                        name.setText(skill1Info.get(1));
+                        description.setText(skill1Info.get(2));
                     }
-                    else if((secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2info.isEmpty())
-                            || (!secondaryInfo.isEmpty() && passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2info.isEmpty())
-                            ||(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && skill1Info.isEmpty() && !skill2info.isEmpty())){
+                    else if((secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2Info.isEmpty())
+                            || (!secondaryInfo.isEmpty() && passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2Info.isEmpty())
+                            ||(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && skill1Info.isEmpty() && !skill2Info.isEmpty())){
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill2Info);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(skill2info.get(2)));
-                        name.setText(skill2info.get(0));
-                        description.setText(skill2info.get(1));
+                        image.setImageResource(Integer.parseInt(skill2Info.get(3)));
+                        name.setText(skill2Info.get(1));
+                        description.setText(skill2Info.get(2));
                     }
-                    else if((secondaryInfo.isEmpty() && passiveInfo.isEmpty() && !skill2info.isEmpty())){
+                    else if((secondaryInfo.isEmpty() && passiveInfo.isEmpty() && !skill2Info.isEmpty())){
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", ultInfo);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(ultInfo.get(2)));
-                        name.setText(ultInfo.get(0));
-                        description.setText(ultInfo.get(1));
+                        image.setImageResource(Integer.parseInt(ultInfo.get(3)));
+                        name.setText(ultInfo.get(1));
+                        description.setText(ultInfo.get(2));
                     }
                     break;
                 case 4:
-                    if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2info.isEmpty()){
+                    if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2Info.isEmpty()){
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill2Info);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(skill2info.get(2)));
-                        name.setText(skill2info.get(0));
-                        description.setText(skill2info.get(1));
+                        image.setImageResource(Integer.parseInt(skill2Info.get(3)));
+                        name.setText(skill2Info.get(1));
+                        description.setText(skill2Info.get(2));
                     }
                     else{
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", ultInfo);
+                                innerFragment.setArguments(bundle);
 
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
-                        image.setImageResource(Integer.parseInt(ultInfo.get(2)));
-                        name.setText(ultInfo.get(0));
-                        description.setText(ultInfo.get(1));
+                        image.setImageResource(Integer.parseInt(ultInfo.get(3)));
+                        name.setText(ultInfo.get(1));
+                        description.setText(ultInfo.get(2));
                     }
                     break;
                 case 5:
                     listItem.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                            Bundle bundle = new Bundle();
+                            bundle.putStringArrayList( "Ability Info", ultInfo);
+                            innerFragment.setArguments(bundle);
 
+                            //Display HeroAbilityFragment
+                            innerFragment.show(fm, "fragment_hero_ability");
                         }
                     });
-                    image.setImageResource(Integer.parseInt(ultInfo.get(2)));
-                    name.setText(ultInfo.get(0));
-                    description.setText(ultInfo.get(1));
+                    image.setImageResource(Integer.parseInt(ultInfo.get(3)));
+                    name.setText(ultInfo.get(1));
+                    description.setText(ultInfo.get(2));
                     break;
             }
 

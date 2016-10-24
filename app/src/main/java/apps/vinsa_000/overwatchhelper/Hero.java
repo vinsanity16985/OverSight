@@ -61,6 +61,9 @@ public class Hero {
     private String ultName;
     private String ultDescription;
 
+    //Used for inner Fragment
+    private String abilityType;
+
     public Hero(int heroNum, Context context) {
         basicInfo = new ArrayList<String>();
         primaryInfo = new ArrayList<String>();
@@ -149,12 +152,11 @@ public class Hero {
                 skill2Description = "Pharah looses a wrist rocket that knocks back any enemies it strikes.";
                 ultName = "Barrage";
                 ultDescription = "Pharah directs a continuous salvo of mini-rockets to destroy groups of enemies.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_pharah", "drawable", context.getPackageName());
+                passivePic = context.getResources().getIdentifier("passive_pharah", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_pharah", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_pharah", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_pharah", "drawable", context.getPackageName());
                 break;
             case Constants.REAPER:
                 numAbilities = 5;
@@ -177,12 +179,11 @@ public class Hero {
                 skill2Description = "After marking a destination, Reaper disappears and reappears at that location.";
                 ultName = "Death Blossom";
                 ultDescription = "In a blur of motion, Reaper empties both hellfire shotguns at breakneck speed, dealing massive damage to all nearby enemies.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_reaper", "drawable", context.getPackageName());
+                passivePic = context.getResources().getIdentifier("passive_reaper", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_reaper", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_reaper", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_reaper", "drawable", context.getPackageName());
                 break;
             case Constants.SOLDIER:
                 numAbilities = 5;
@@ -205,12 +206,11 @@ public class Hero {
                 skill2Description = "Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.";
                 ultName = "Tactical Visor";
                 ultDescription = "Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_soldier", "drawable", context.getPackageName());
+                secondaryPic = context.getResources().getIdentifier("secondary_soldier", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_soldier", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_soldier", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_soldier", "drawable", context.getPackageName());
                 break;
             case Constants.TRACER:
                 heroPortrait = context.getResources().getIdentifier("tracer_icon", "drawable", context.getPackageName());
@@ -231,12 +231,10 @@ public class Hero {
                 skill2Description = "Tracer bounds backward in time, returning her health, ammo and position on the map to precisely where they were a few seconds before.";
                 ultName = "Pulse Bomb";
                 ultDescription = "Tracer lobs a large bomb that adheres to any surface or unfortunate opponent it lands on. After a brief delay, the bomb explodes, dealing high damage to all enemies within its blast radius.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_tracer", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_tracer", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_tracer", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_tracer", "drawable", context.getPackageName());
                 break;
             case Constants.BASTION:
                 numAbilities = 5;
@@ -259,12 +257,11 @@ public class Hero {
                 skill2Description = "Bastion restores its health; it cannot move or fire weapons while the repair process is in effect.";
                 ultName = "Configuration: Tank";
                 ultDescription = "In Tank mode, Bastion extends wheeled treads and a powerful long-range cannon. The cannon’s explosive shells demolish targets in a wide blast radius, but Bastion can only remain in this mode for a limited time.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_bastion", "drawable", context.getPackageName());
+                secondaryPic = context.getResources().getIdentifier("secondary_bastion", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_bastion", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_bastion", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_bastion", "drawable", context.getPackageName());
                 break;
             case Constants.HANZO:
                 numAbilities = 5;
@@ -287,12 +284,11 @@ public class Hero {
                 skill2Description = "Hanzo shoots a fragmenting arrow that ricochets off walls and objects and can strike multiple targets at once.";
                 ultName = "Dragonstrike";
                 ultDescription = "Hanzo summons a Spirit Dragon which travels through the air in a line. It passes through walls in its way, devouring any enemies it encounters.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_hanzo", "drawable", context.getPackageName());
+                passivePic = context.getResources().getIdentifier("passive_hanzo", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_hanzo", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_hanzo", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_hanzo", "drawable", context.getPackageName());
                 break;
             case Constants.JUNKRAT:
                 numAbilities = 5;
@@ -315,12 +311,11 @@ public class Hero {
                 skill2Description = "Junkrat tosses out a giant, metal-toothed trap. Should an enemy wander too close to the trap, it clamps on, injuring and immobilizing them.";
                 ultName = "RIP-Tire";
                 ultDescription = "Junkrat revs up a motorized tire bomb and sends it rolling across the battlefield, climbing over walls and obstacles. He can remotely detonate the RIP-Tire to deal serious damage to enemies caught within the blast, or just wait for it to explode on its own.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_junkrat", "drawable", context.getPackageName());
+                passivePic = context.getResources().getIdentifier("passive_junkrat", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_junkrat", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_junkrat", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_junkrat", "drawable", context.getPackageName());
                 break;
             case Constants.MEI:
                 numAbilities = 5;
@@ -343,12 +338,11 @@ public class Hero {
                 skill2Description = "Mei generates an enormous ice wall that obstructs lines of sight, stops movement, and blocks attacks.";
                 ultName = "Blizzard";
                 ultDescription = "Mei deploys a weather-modification drone that emits gusts of wind and snow in a wide area. Enemies caught in the blizzard are slowed and take damage; those who linger too long are frozen solid.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_mei", "drawable", context.getPackageName());
+                secondaryPic = context.getResources().getIdentifier("primary_mei", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_mei", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_mei", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_mei", "drawable", context.getPackageName());
                 break;
             case Constants.TORBJORN:
                 numAbilities = 7;
@@ -373,12 +367,12 @@ public class Hero {
                 skill2Description = "Torbjörn deploys an armor upgrade; either he or his allies can pick it up to absorb some damage.";
                 ultName = "Molten Core";
                 ultDescription = "After overheating his personal forge, Torbjörn gains a significant amount of armor. He also attacks (and builds and repairs turrets) far faster than normal";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_torbjorn", "drawable", context.getPackageName());
+                secondaryPic = context.getResources().getIdentifier("secondary_torbjorn", "drawable", context.getPackageName());
+                passivePic = context.getResources().getIdentifier("passive_torbjorn", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_torbjorn", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_torbjorn", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_torbjorn", "drawable", context.getPackageName());
                 break;
             case Constants.WIDOWMAKER:
                 numAbilities = 5;
@@ -401,16 +395,12 @@ public class Hero {
                 skill2Description = "Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine’s motion trigger, it explodes, delivering poison gas to any enemies in the vicinity.";
                 ultName = "Infra-Sight";
                 ultDescription = "Widowmaker’s recon visor allows her to see the heat signatures of her targets through walls and objects for a moderate amount of time. This enhanced vision is shared with her allies.";
-                primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
-                secondaryPic = context.getResources().getIdentifier("secondary_genji", "drawable", context.getPackageName());
-                passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
-                skill1Pic = context.getResources().getIdentifier("skill1_genji", "drawable", context.getPackageName());
-                skill2Pic = context.getResources().getIdentifier("skill2_genji", "drawable", context.getPackageName());
-                ultPic = context.getResources().getIdentifier("ult_genji", "drawable", context.getPackageName());
+                primaryPic = context.getResources().getIdentifier("primary_widowmaker", "drawable", context.getPackageName());
+                secondaryPic = context.getResources().getIdentifier("primary_widowmaker", "drawable", context.getPackageName());
+                skill1Pic = context.getResources().getIdentifier("skill1_widowmaker", "drawable", context.getPackageName());
+                skill2Pic = context.getResources().getIdentifier("skill2_widowmaker", "drawable", context.getPackageName());
+                ultPic = context.getResources().getIdentifier("ult_widowmaker", "drawable", context.getPackageName());
                 break;
-            //
-            //
-            //
             case Constants.DVA:
                 numAbilities = 5;
                 heroPortrait = context.getResources().getIdentifier("dva_icon", "drawable", context.getPackageName());
@@ -686,31 +676,43 @@ public class Hero {
         basicInfo.add(total);
         basicInfo.add(Integer.toString(heroPortrait));
         if(primaryName != null){
+            abilityType = "primary";
+            primaryInfo.add(abilityType);
             primaryInfo.add(primaryName);
             primaryInfo.add(primaryDescription);
             primaryInfo.add(Integer.toString(primaryPic));
         }
         if(secondaryName != null){
+            abilityType = "secondary";
+            secondaryInfo.add(abilityType);
             secondaryInfo.add(secondaryName);
             secondaryInfo.add(secondaryDescription);
             secondaryInfo.add(Integer.toString(secondaryPic));
         }
         if(passiveName != null){
+            abilityType = "passive";
+            passiveInfo.add(abilityType);
             passiveInfo.add(passiveName);
             passiveInfo.add(passiveDescription);
             passiveInfo.add(Integer.toString(passivePic));
         }
         if(skill1Name != null){
+            abilityType = "skill 1";
+            skill1Info.add(abilityType);
             skill1Info.add(skill1Name);
             skill1Info.add(skill1Description);
             skill1Info.add(Integer.toString(skill1Pic));
         }
         if(skill2Name != null){
+            abilityType = "skill 2";
+            skill2Info.add(abilityType);
             skill2Info.add(skill2Name);
             skill2Info.add(skill2Description);
             skill2Info.add(Integer.toString(skill2Pic));
         }
         if(ultName != null){
+            abilityType = "ultimate";
+            ultInfo.add(abilityType);
             ultInfo.add(ultName);
             ultInfo.add(ultDescription);
             ultInfo.add(Integer.toString(ultPic));
