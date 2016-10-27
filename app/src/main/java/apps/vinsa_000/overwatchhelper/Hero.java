@@ -30,36 +30,136 @@ public class Hero {
     private int primaryPic;
     private String primaryName;
     private String primaryDescription;
+    private String primaryItem1;
+    private String primaryItem2;
+    private String primaryItem3;
+    private String primaryItem4;
+    private String primaryItem5;
+    private String primaryItem6;
+    private String primaryItem7;
+    private String primaryItem8;
+    private String primaryItemTitle1;
+    private String primaryItemTitle2;
+    private String primaryItemTitle3;
+    private String primaryItemTitle4;
+    private String primaryItemTitle5;
+    private String primaryItemTitle6;
+    private String primaryItemTitle7;
+    private String primaryItemTitle8;
 
     //Hero secondary weapon info
     private ArrayList<String> secondaryInfo;
     private int secondaryPic;
     private String secondaryName;
     private String secondaryDescription;
+    private String secondaryItem1;
+    private String secondaryItem2;
+    private String secondaryItem3;
+    private String secondaryItem4;
+    private String secondaryItem5;
+    private String secondaryItem6;
+    private String secondaryItem7;
+    private String secondaryItem8;
+    private String secondaryItemTitle1;
+    private String secondaryItemTitle2;
+    private String secondaryItemTitle3;
+    private String secondaryItemTitle4;
+    private String secondaryItemTitle5;
+    private String secondaryItemTitle6;
+    private String secondaryItemTitle7;
+    private String secondaryItemTitle8;
 
     //Hero passive ability info
     private ArrayList<String> passiveInfo;
     private int passivePic;
     private String passiveName;
     private String passiveDescription;
+    private String passiveItem1;
+    private String passiveItem2;
+    private String passiveItem3;
+    private String passiveItem4;
+    private String passiveItem5;
+    private String passiveItem6;
+    private String passiveItem7;
+    private String passiveItem8;
+    private String passiveItemTitle1;
+    private String passiveItemTitle2;
+    private String passiveItemTitle3;
+    private String passiveItemTitle4;
+    private String passiveItemTitle5;
+    private String passiveItemTitle6;
+    private String passiveItemTitle7;
+    private String passiveItemTitle8;
+
 
     //Hero skill1 ability info
     private ArrayList<String> skill1Info;
     private int skill1Pic;
     private String skill1Name;
     private String skill1Description;
+    private String skill1Item1;
+    private String skill1Item2;
+    private String skill1Item3;
+    private String skill1Item4;
+    private String skill1Item5;
+    private String skill1Item6;
+    private String skill1Item7;
+    private String skill1Item8;
+    private String skill1ItemTitle1;
+    private String skill1ItemTitle2;
+    private String skill1ItemTitle3;
+    private String skill1ItemTitle4;
+    private String skill1ItemTitle5;
+    private String skill1ItemTitle6;
+    private String skill1ItemTitle7;
+    private String skill1ItemTitle8;
+
 
     //Hero skill2 ability info
     private ArrayList<String> skill2Info;
     private int skill2Pic;
     private String skill2Name;
     private String skill2Description;
+    private String skill2Item1;
+    private String skill2Item2;
+    private String skill2Item3;
+    private String skill2Item4;
+    private String skill2Item5;
+    private String skill2Item6;
+    private String skill2Item7;
+    private String skill2Item8;
+    private String skill2ItemTitle1;
+    private String skill2ItemTitle2;
+    private String skill2ItemTitle3;
+    private String skill2ItemTitle4;
+    private String skill2ItemTitle5;
+    private String skill2ItemTitle6;
+    private String skill2ItemTitle7;
+    private String skill2ItemTitle8;
+
 
     //Hero ult ability info
     private ArrayList<String> ultInfo;
     private int ultPic;
     private String ultName;
     private String ultDescription;
+    private String ultItem1;
+    private String ultItem2;
+    private String ultItem3;
+    private String ultItem4;
+    private String ultItem5;
+    private String ultItem6;
+    private String ultItem7;
+    private String ultItem8;
+    private String ultItemTitle1;
+    private String ultItemTitle2;
+    private String ultItemTitle3;
+    private String ultItemTitle4;
+    private String ultItemTitle5;
+    private String ultItemTitle6;
+    private String ultItemTitle7;
+    private String ultItemTitle8;
+
 
     //Used for inner Fragment
     private String abilityType;
@@ -87,16 +187,82 @@ public class Hero {
                 total = "200";
                 primaryName = "Shuriken";
                 primaryDescription = "Genji looses three deadly throwing stars in quick succession.";
+                primaryItemTitle1 = "Type";
+                primaryItem1 = "Linear Projectile";
+                primaryItemTitle2 = "Damage";
+                primaryItem2 = "28 per projectile";
+                primaryItemTitle3 = "Projectile Speed";
+                primaryItem3 = "47 m/s";
+                primaryItemTitle4 = "Rate of Fire";
+                primaryItem4 = "1 shot per sec";
+                primaryItemTitle5 = "Ammo";
+                primaryItem5 = "24";
+                primaryItemTitle6 = "Ammo Usage";
+                primaryItem6 = "3 rounds per shot";
+                primaryItemTitle7 = "Reload Time";
+                primaryItem7 = "1 second";
+                primaryItemTitle8 = "Headshot";
+                primaryItem8 = "Yes";
                 secondaryName = "Fan of Blades";
                 secondaryDescription = "Genji throws three deadly throwing stars in a wide spread.";
+                secondaryItemTitle1 = "Type";
+                secondaryItem1 = "Linear Projectile";
+                secondaryItemTitle2 = "Damage";
+                secondaryItem2 = "28 per projectile";
+                secondaryItemTitle3 = "Projectile Speed";
+                secondaryItem3 = "47 m/s";
+                secondaryItemTitle4 = "Rate of Fire";
+                secondaryItem4 = "1.33 shots per sec";
+                secondaryItemTitle5 = "Ammo";
+                secondaryItem5 = "24";
+                secondaryItemTitle6 = "Ammo Usage";
+                secondaryItem6 = "3 rounds per shot";
+                secondaryItemTitle7 = "Reload Time";
+                secondaryItem7 = "1 second";
+                secondaryItemTitle8 = "Headshot";
+                secondaryItem8 = "Yes";
                 passiveName = "Cyber-Agility";
                 passiveDescription = "Thanks to his cybernetic abilities, Genji can climb walls and perform jumps in mid-air.";
+                passiveItemTitle1 = "Type";
+                passiveItem1 = "Non-Damaging Movement";
                 skill1Name = "Swift Strike";
                 skill1Description = "Genji darts forward, slashing with his katana and passing through foes in his path. If Genji eliminates a target, he can instantly use this ability again.";
+                skill1ItemTitle1 = "Damage";
+                skill1Item1 = "50";
+                skill1ItemTitle2 = "Movement Speed";
+                skill1Item2 = "35 m/s";
+                skill1ItemTitle3 = "Max Range";
+                skill1Item3 = "14 meters";
+                skill1ItemTitle4 = "Duration";
+                skill1Item4 = "0.4 seconds";
+                skill1ItemTitle5 = "Cooldown";
+                skill1Item5 = "8 seconds";
+                skill1ItemTitle6 = "Headshot";
+                skill1Item6 = "No";
                 skill2Name = "Deflect";
                 skill2Description = "With lightning-quick swipes of his sword, Genji reflects any oncoming projectiles and can send them rebounding towards his enemies.";
+                skill2ItemTitle1 = "Duration";
+                skill2Item1 = "2 seconds";
+                skill2ItemTitle2 = "Cooldown";
+                skill2Item2 = "8 seconds";
                 ultName = "Dragonblade";
                 ultDescription = "Genji brandishes his katana for a brief period of time. Until he sheathes his sword, Genji can deliver killing strikes to any targets within his reach.";
+                ultItemTitle1 = "Type";
+                ultItem1 = "Melee";
+                ultItemTitle2 = "Damage";
+                ultItem2 = "120 per swing";
+                ultItemTitle3 = "Movement Speed";
+                ultItem3 = "8 m/s";
+                ultItemTitle4 = "Max Range";
+                ultItem4 = "5 meters";
+                ultItemTitle5 = "Rate of Fire";
+                ultItem5 = "1 swing per sec";
+                ultItemTitle6 = "Duration";
+                ultItem6 = "6 seconds";
+                ultItemTitle7 = "Headshot";
+                ultItem7 = "No";
+                ultItemTitle8 = "Charge Required";
+                ultItem8 = "1200 points";
                 primaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
                 secondaryPic = context.getResources().getIdentifier("primary_genji", "drawable", context.getPackageName());
                 passivePic = context.getResources().getIdentifier("passive_genji", "drawable", context.getPackageName());
@@ -676,46 +842,200 @@ public class Hero {
         basicInfo.add(total);
         basicInfo.add(Integer.toString(heroPortrait));
         if(primaryName != null){
+            //Add all possible primary values to tempArray
+            ArrayList<String> tempArray = new ArrayList<String>();
+            tempArray.add(primaryItemTitle1);
+            tempArray.add(primaryItemTitle2);
+            tempArray.add(primaryItemTitle3);
+            tempArray.add(primaryItemTitle4);
+            tempArray.add(primaryItemTitle5);
+            tempArray.add(primaryItemTitle6);
+            tempArray.add(primaryItemTitle7);
+            tempArray.add(primaryItemTitle8);
+            tempArray.add(primaryItem1);
+            tempArray.add(primaryItem2);
+            tempArray.add(primaryItem3);
+            tempArray.add(primaryItem4);
+            tempArray.add(primaryItem5);
+            tempArray.add(primaryItem6);
+            tempArray.add(primaryItem7);
+            tempArray.add(primaryItem8);
+
             abilityType = "primary";
             primaryInfo.add(abilityType);
             primaryInfo.add(primaryName);
             primaryInfo.add(primaryDescription);
             primaryInfo.add(Integer.toString(primaryPic));
+            //Only add primary values that exist
+            for(String s: tempArray){
+                if(s != null){
+                    primaryInfo.add(s);
+                }
+            }
         }
         if(secondaryName != null){
+            //Add all possible secondary values to tempArray
+            ArrayList<String> tempArray = new ArrayList<String>();
+            tempArray.add(secondaryItemTitle1);
+            tempArray.add(secondaryItemTitle2);
+            tempArray.add(secondaryItemTitle3);
+            tempArray.add(secondaryItemTitle4);
+            tempArray.add(secondaryItemTitle5);
+            tempArray.add(secondaryItemTitle6);
+            tempArray.add(secondaryItemTitle7);
+            tempArray.add(secondaryItemTitle8);
+            tempArray.add(secondaryItem1);
+            tempArray.add(secondaryItem2);
+            tempArray.add(secondaryItem3);
+            tempArray.add(secondaryItem4);
+            tempArray.add(secondaryItem5);
+            tempArray.add(secondaryItem6);
+            tempArray.add(secondaryItem7);
+            tempArray.add(secondaryItem8);
+
             abilityType = "secondary";
             secondaryInfo.add(abilityType);
             secondaryInfo.add(secondaryName);
             secondaryInfo.add(secondaryDescription);
             secondaryInfo.add(Integer.toString(secondaryPic));
+
+            //Only add secondary values that exist
+            for(String s: tempArray){
+                if(s != null){
+                    secondaryInfo.add(s);
+                }
+            }
         }
         if(passiveName != null){
+            //Add all possible passive values to tempArray
+            ArrayList<String> tempArray = new ArrayList<String>();
+            tempArray.add(passiveItemTitle1);
+            tempArray.add(passiveItemTitle2);
+            tempArray.add(passiveItemTitle3);
+            tempArray.add(passiveItemTitle4);
+            tempArray.add(passiveItemTitle5);
+            tempArray.add(passiveItemTitle6);
+            tempArray.add(passiveItemTitle7);
+            tempArray.add(passiveItemTitle8);
+            tempArray.add(passiveItem1);
+            tempArray.add(passiveItem2);
+            tempArray.add(passiveItem3);
+            tempArray.add(passiveItem4);
+            tempArray.add(passiveItem5);
+            tempArray.add(passiveItem6);
+            tempArray.add(passiveItem7);
+            tempArray.add(passiveItem8);
+
             abilityType = "passive";
             passiveInfo.add(abilityType);
             passiveInfo.add(passiveName);
             passiveInfo.add(passiveDescription);
             passiveInfo.add(Integer.toString(passivePic));
+            //Only add passive values that exist
+            for(String s: tempArray){
+                if(s != null){
+                    passiveInfo.add(s);
+                }
+            }
         }
         if(skill1Name != null){
+            //Add all possible skill1 values to tempArray
+            ArrayList<String> tempArray = new ArrayList<String>();
+            tempArray.add(skill1ItemTitle1);
+            tempArray.add(skill1ItemTitle2);
+            tempArray.add(skill1ItemTitle3);
+            tempArray.add(skill1ItemTitle4);
+            tempArray.add(skill1ItemTitle5);
+            tempArray.add(skill1ItemTitle6);
+            tempArray.add(skill1ItemTitle7);
+            tempArray.add(skill1ItemTitle8);
+            tempArray.add(skill1Item1);
+            tempArray.add(skill1Item2);
+            tempArray.add(skill1Item3);
+            tempArray.add(skill1Item4);
+            tempArray.add(skill1Item5);
+            tempArray.add(skill1Item6);
+            tempArray.add(skill1Item7);
+            tempArray.add(skill1Item8);
+
             abilityType = "skill 1";
             skill1Info.add(abilityType);
             skill1Info.add(skill1Name);
             skill1Info.add(skill1Description);
             skill1Info.add(Integer.toString(skill1Pic));
+
+            //Only add skill1 values that exist
+            for(String s: tempArray){
+                if(s != null){
+                    skill1Info.add(s);
+                }
+            }
         }
         if(skill2Name != null){
+            //Add all possible skill2 values to tempArray
+            ArrayList<String> tempArray = new ArrayList<String>();
+            tempArray.add(skill2ItemTitle1);
+            tempArray.add(skill2ItemTitle2);
+            tempArray.add(skill2ItemTitle3);
+            tempArray.add(skill2ItemTitle4);
+            tempArray.add(skill2ItemTitle5);
+            tempArray.add(skill2ItemTitle6);
+            tempArray.add(skill2ItemTitle7);
+            tempArray.add(skill2ItemTitle8);
+            tempArray.add(skill2Item1);
+            tempArray.add(skill2Item2);
+            tempArray.add(skill2Item3);
+            tempArray.add(skill2Item4);
+            tempArray.add(skill2Item5);
+            tempArray.add(skill2Item6);
+            tempArray.add(skill2Item7);
+            tempArray.add(skill2Item8);
+
             abilityType = "skill 2";
             skill2Info.add(abilityType);
             skill2Info.add(skill2Name);
             skill2Info.add(skill2Description);
             skill2Info.add(Integer.toString(skill2Pic));
+
+            //Only add skill2 values that exist
+            for(String s: tempArray){
+                if(s != null){
+                    skill2Info.add(s);
+                }
+            }
         }
         if(ultName != null){
+            //Add all possible ult values to tempArray
+            ArrayList<String> tempArray = new ArrayList<String>();
+            tempArray.add(ultItemTitle1);
+            tempArray.add(ultItemTitle2);
+            tempArray.add(ultItemTitle3);
+            tempArray.add(ultItemTitle4);
+            tempArray.add(ultItemTitle5);
+            tempArray.add(ultItemTitle6);
+            tempArray.add(ultItemTitle7);
+            tempArray.add(ultItemTitle8);
+            tempArray.add(ultItem1);
+            tempArray.add(ultItem2);
+            tempArray.add(ultItem3);
+            tempArray.add(ultItem4);
+            tempArray.add(ultItem5);
+            tempArray.add(ultItem6);
+            tempArray.add(ultItem7);
+            tempArray.add(ultItem8);
+
             abilityType = "ultimate";
             ultInfo.add(abilityType);
             ultInfo.add(ultName);
             ultInfo.add(ultDescription);
             ultInfo.add(Integer.toString(ultPic));
+
+            //Only add ult values that exist
+            for(String s: tempArray){
+                if(s != null){
+                    ultInfo.add(s);
+                }
+            }
         }
     }
 

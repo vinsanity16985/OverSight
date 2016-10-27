@@ -67,8 +67,8 @@ public class HeroDetailActivity extends AppCompatActivity{
         ArrayList<String> heroBasicInfo = hero.getBasicInfo();
 
         heroName.setText("Name: " + heroBasicInfo.get(0));
-        heroAge.setText("Age: " + heroBasicInfo.get(1));
-        heroHeight.setText("Height: " + heroBasicInfo.get(2));
+        heroAge.setText("Age: " + heroBasicInfo.get(2));
+        heroHeight.setText("Height: " + heroBasicInfo.get(1));
         heroDifficulty.setText("Difficulty: " + heroBasicInfo.get(3));
         heroHealth.setText("Health: " + heroBasicInfo.get(4));
         heroArmor.setText("Armor: " + heroBasicInfo.get(5));
