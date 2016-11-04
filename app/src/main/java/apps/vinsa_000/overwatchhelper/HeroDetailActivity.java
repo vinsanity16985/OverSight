@@ -2,6 +2,8 @@ package apps.vinsa_000.overwatchhelper;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -20,104 +21,72 @@ public class HeroDetailActivity extends AppCompatActivity{
     private Intent intent;
     ListView listView;
     Hero hero;
-    ArrayList<String> heroBasicInfo;
+
+    ImageView heroPortrait;
+    TextView heroName;
+    TextView heroAge;
+    TextView heroHeight;
+    TextView heroDifficulty;
+    TextView heroHealth;
+    TextView heroArmor;
+    TextView heroShield;
+    TextView heroTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_hero_detail);
+
+        //Grab intent and heroNum
         intent = getIntent();
         int heroNum = intent.getIntExtra("Hero Number", Constants.NO_NUM);
-        //Sets correct layout to display hero requested
-        setHeroDetail(heroNum);
 
-        hero = new Hero(heroNum);
+        //Initialize necessary views
         listView = (ListView)findViewById(R.id.hero_ability_list);
-        populateListView();
+        heroPortrait = (ImageView)findViewById(R.id.hero_portrait);
+        heroName = (TextView)findViewById(R.id.hero_name);
+        heroAge = (TextView)findViewById(R.id.hero_age);
+        heroHeight = (TextView)findViewById(R.id.hero_height);
+        heroDifficulty = (TextView)findViewById(R.id.hero_difficulty);
+        heroHealth = (TextView)findViewById(R.id.hero_health);
+        heroArmor = (TextView)findViewById(R.id.hero_armor);
+        heroShield = (TextView)findViewById(R.id.hero_shield);
+        heroTotal = (TextView)findViewById(R.id.hero_total);
+
+
+        //Specify which hero to get data for using heroNum
+        hero = new Hero(heroNum, this);
+        //Set up hero's basic info
+        setBasicInfo();
+        //Set up hero's abilities list
+        setUpAbilityListView();
     }
 
-    private void populateListView() {
+    //Gets a certain hero's basic info and displays it
+    private void setBasicInfo(){
+        ArrayList<String> heroBasicInfo = hero.getBasicInfo();
+
+        heroName.setText("Name: " + heroBasicInfo.get(0));
+        heroAge.setText("Age: " + heroBasicInfo.get(2));
+        heroHeight.setText("Height: " + heroBasicInfo.get(1));
+        heroDifficulty.setText("Difficulty: " + heroBasicInfo.get(3));
+        heroHealth.setText("Health: " + heroBasicInfo.get(4));
+        heroArmor.setText("Armor: " + heroBasicInfo.get(5));
+        heroShield.setText("Shield: " + heroBasicInfo.get(6));
+        heroTotal.setText("Total: " + heroBasicInfo.get(7));
+        heroPortrait.setImageResource(Integer.parseInt(heroBasicInfo.get(8)));
+    }
+    private void setUpAbilityListView() {
         //Populate list of hero info
         ArrayList<Hero> heroInfo = new ArrayList<Hero>();
-        for(int i = 0; i < hero.numAbilities; i++){
+        for(int i = 0; i < hero.getNumAbilities(); i++){
             Hero temp = hero;
             heroInfo.add(temp);
         }
         //Place in adapter
         AbilityListAdapter adapter = new AbilityListAdapter(this, heroInfo);
-
         //Tie adapter to listview
         listView.setAdapter(adapter);
-    }
-
-    private void setHeroDetail(int heroNum){
-        switch(heroNum){
-            case Constants.GENJI:
-                setContentView(R.layout.genji_layout);
-                break;
-            case Constants.MCCREE:
-                setContentView(R.layout.mccree_layout);
-                break;
-            case Constants.PHARAH:
-                setContentView(R.layout.pharah_layout);
-                break;
-            case Constants.REAPER:
-                setContentView(R.layout.reaper_layout);
-                break;
-            case Constants.SOLDIER:
-                setContentView(R.layout.soldier_layout);
-                break;
-            case Constants.TRACER:
-                setContentView(R.layout.tracer_layout);
-                break;
-            case Constants.BASTION:
-                setContentView(R.layout.bastion_layout);
-                break;
-            case Constants.HANZO:
-                setContentView(R.layout.hanzo_layout);
-                break;
-            case Constants.JUNKRAT:
-                setContentView(R.layout.junkrat_layout);
-                break;
-            case Constants.MEI:
-                setContentView(R.layout.mei_layout);
-                break;
-            case Constants.TORBJORN:
-                setContentView(R.layout.torbjorn_layout);
-                break;
-            case Constants.WIDOWMAKER:
-                setContentView(R.layout.widowmaker_layout);
-                break;
-            case Constants.DVA:
-                setContentView(R.layout.dva_layout);
-                break;
-            case Constants.REINHARDT:
-                setContentView(R.layout.reinhardt_layout);
-                break;
-            case Constants.ROADHOG:
-                setContentView(R.layout.roadhog_layout);
-                break;
-            case Constants.WINSTON:
-                setContentView(R.layout.winston_layout);
-                break;
-            case Constants.ZARYA:
-                setContentView(R.layout.zarya_layout);
-                break;
-            case Constants.ANA:
-                setContentView(R.layout.ana_layout);
-                break;
-            case Constants.LUCIO:
-                setContentView(R.layout.lucio_layout);
-                break;
-            case Constants.MERCY:
-                setContentView(R.layout.mercy_layout);
-                break;
-            case Constants.SYMMETRA:
-                setContentView(R.layout.symmetra_layout);
-                break;
-            case Constants.ZENYATTA:
-                setContentView(R.layout.zenyatta_layout);
-                break;
-        }
     }
 
     public class AbilityListAdapter extends ArrayAdapter<Hero>{
@@ -130,6 +99,12 @@ public class HeroDetailActivity extends AppCompatActivity{
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
             Hero currentHero = getItem(position);
+            final ArrayList<String> primaryInfo = currentHero.getPrimaryInfo();
+            final ArrayList<String> secondaryInfo = currentHero.getSecondaryInfo();
+            final ArrayList<String> passiveInfo = currentHero.getPassiveInfo();
+            final ArrayList<String> skill1Info = currentHero.getSkill1Info();
+            final ArrayList<String> skill2Info = currentHero.getSkill2Info();
+            final ArrayList<String> ultInfo = currentHero.getUltInfo();
 
             if(convertView == null){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_listview, parent, false);
@@ -140,88 +115,243 @@ public class HeroDetailActivity extends AppCompatActivity{
             TextView name = (TextView)convertView.findViewById(R.id.ability_name);
             TextView description = (TextView)convertView.findViewById(R.id.ability_description);
 
+            //Standardize width and height of image
+            image.getLayoutParams().width = 150;
+            image.getLayoutParams().height = 150;
+
+            final FragmentManager fm = getSupportFragmentManager();
             switch (position){
                 case 0:
-                    if(currentHero.hasPrimary){
-                        image.setImageResource(R.drawable.primary_genji);
-                        name.setText(currentHero.primaryName);
-                        description.setText(currentHero.primaryDescription);
+                    if(!primaryInfo.isEmpty()){
                         listItem.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Toast toast = Toast.makeText(context, "Primary", Toast.LENGTH_SHORT);
-                                toast.show();
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", primaryInfo);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
                             }
                         });
+                        image.setImageResource(Integer.parseInt(primaryInfo.get(3)));
+                        name.setText(primaryInfo.get(1));
+                        description.setText(primaryInfo.get(2));
                     }
                     break;
                 case 1:
-                    if(currentHero.hasSecondary){
-                        image.setImageResource(R.drawable.primary_genji);
-                        name.setText(currentHero.secondaryName);
-                        description.setText(currentHero.secondaryDescription);
+                    if(!secondaryInfo.isEmpty()){
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", secondaryInfo);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(secondaryInfo.get(3)));
+                        name.setText(secondaryInfo.get(1));
+                        description.setText(secondaryInfo.get(2));
                     }
-                    else if(currentHero.hasPassive){
-                        image.setImageResource(R.drawable.passive_genji);
-                        name.setText(currentHero.passiveName);
-                        description.setText(currentHero.passiveDescription);
+                    else if(!passiveInfo.isEmpty()){
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", passiveInfo);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");}
+                        });
+                        image.setImageResource(Integer.parseInt(passiveInfo.get(3)));
+                        name.setText(passiveInfo.get(1));
+                        description.setText(passiveInfo.get(2));
                     }
                     else{
-                        image.setImageResource(R.drawable.skill1_genji);
-                        name.setText(currentHero.skill1Name);
-                        description.setText(currentHero.skill1Description);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill1Info);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill1Info.get(3)));
+                        name.setText(skill1Info.get(1));
+                        description.setText(skill1Info.get(2));
                     }
                     break;
                 case 2:
-                    if(currentHero.hasSecondary && currentHero.hasPassive){
-                        image.setImageResource(R.drawable.passive_genji);
-                        name.setText(currentHero.passiveName);
-                        description.setText(currentHero.passiveDescription);
+                    if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty()){
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", passiveInfo);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(passiveInfo.get(3)));
+                        name.setText(passiveInfo.get(1));
+                        description.setText(passiveInfo.get(2));
                     }
-                    else if((currentHero.hasSecondary && !currentHero.hasPassive) || (!currentHero.hasSecondary && currentHero.hasPassive)){
-                        image.setImageResource(R.drawable.skill1_genji);
-                        name.setText(currentHero.skill1Name);
-                        description.setText(currentHero.skill1Description);
+                    else if((!secondaryInfo.isEmpty() && passiveInfo.isEmpty()) || (secondaryInfo.isEmpty() && !passiveInfo.isEmpty())){
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill1Info);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill1Info.get(3)));
+                        name.setText(skill1Info.get(1));
+                        description.setText(skill1Info.get(2));
                     }
                     else{
-                        image.setImageResource(R.drawable.skill2_genji);
-                        name.setText(currentHero.skill2Name);
-                        description.setText(currentHero.skill2Description);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill2Info);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill2Info.get(3)));
+                        name.setText(skill2Info.get(1));
+                        description.setText(skill2Info.get(2));
                     }
                     break;
                 case 3:
-                    if(currentHero.hasSecondary && currentHero.hasPassive && currentHero.hasSkill1){
-                        image.setImageResource(R.drawable.skill1_genji);
-                        name.setText(currentHero.skill1Name);
-                        description.setText(currentHero.skill1Description);
+                    listItem.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                            Bundle bundle = new Bundle();
+                            bundle.putStringArrayList( "Ability Info", skill1Info);
+                            innerFragment.setArguments(bundle);
+
+                            //Display HeroAbilityFragment
+                            innerFragment.show(fm, "fragment_hero_ability");
+                        }
+                    });
+                    if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty()){
+                        image.setImageResource(Integer.parseInt(skill1Info.get(3)));
+                        name.setText(skill1Info.get(1));
+                        description.setText(skill1Info.get(2));
                     }
-                    else if((!currentHero.hasSecondary && currentHero.hasPassive && currentHero.hasSkill1 && currentHero.hasSkill2) || (currentHero.hasSecondary && !currentHero.hasPassive && currentHero.hasSkill1 && currentHero.hasSkill2)||(currentHero.hasSecondary && currentHero.hasPassive && !currentHero.hasSkill1 && currentHero.hasSkill2)){
-                        image.setImageResource(R.drawable.skill2_genji);
-                        name.setText(currentHero.skill2Name);
-                        description.setText(currentHero.skill2Description);
+                    else if((secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2Info.isEmpty())
+                            || (!secondaryInfo.isEmpty() && passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2Info.isEmpty())
+                            ||(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && skill1Info.isEmpty() && !skill2Info.isEmpty())){
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill2Info);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill2Info.get(3)));
+                        name.setText(skill2Info.get(1));
+                        description.setText(skill2Info.get(2));
                     }
-                    else if((!currentHero.hasSecondary && !currentHero.hasPassive && currentHero.hasSkill2)){
-                        image.setImageResource(R.drawable.ult_genji);
-                        name.setText(currentHero.ultName);
-                        description.setText(currentHero.ultDescription);
+                    else if((secondaryInfo.isEmpty() && passiveInfo.isEmpty() && !skill2Info.isEmpty())){
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", ultInfo);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(ultInfo.get(3)));
+                        name.setText(ultInfo.get(1));
+                        description.setText(ultInfo.get(2));
                     }
                     break;
                 case 4:
-                    if(currentHero.hasSecondary && currentHero.hasPassive && currentHero.hasSkill1 && currentHero.hasSkill2){
-                        image.setImageResource(R.drawable.skill2_genji);
-                        name.setText(currentHero.skill2Name);
-                        description.setText(currentHero.skill2Description);
+                    if(!secondaryInfo.isEmpty() && !passiveInfo.isEmpty() && !skill1Info.isEmpty() && !skill2Info.isEmpty()){
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", skill2Info);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(skill2Info.get(3)));
+                        name.setText(skill2Info.get(1));
+                        description.setText(skill2Info.get(2));
                     }
                     else{
-                        image.setImageResource(R.drawable.ult_genji);
-                        name.setText(currentHero.ultName);
-                        description.setText(currentHero.ultDescription);
+                        listItem.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putStringArrayList( "Ability Info", ultInfo);
+                                innerFragment.setArguments(bundle);
+
+                                //Display HeroAbilityFragment
+                                innerFragment.show(fm, "fragment_hero_ability");
+                            }
+                        });
+                        image.setImageResource(Integer.parseInt(ultInfo.get(3)));
+                        name.setText(ultInfo.get(1));
+                        description.setText(ultInfo.get(2));
                     }
                     break;
                 case 5:
-                    image.setImageResource(R.drawable.ult_genji);
-                    name.setText(currentHero.ultName);
-                    description.setText(currentHero.ultDescription);
+                    listItem.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            HeroAbilityFragment innerFragment = new HeroAbilityFragment();
+                            Bundle bundle = new Bundle();
+                            bundle.putStringArrayList( "Ability Info", ultInfo);
+                            innerFragment.setArguments(bundle);
+
+                            //Display HeroAbilityFragment
+                            innerFragment.show(fm, "fragment_hero_ability");
+                        }
+                    });
+                    image.setImageResource(Integer.parseInt(ultInfo.get(3)));
+                    name.setText(ultInfo.get(1));
+                    description.setText(ultInfo.get(2));
                     break;
             }
 
