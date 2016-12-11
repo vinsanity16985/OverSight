@@ -1,5 +1,7 @@
 package apps.vinsa_000.overwatchhelper;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -27,11 +29,32 @@ public class HomeActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    @Override
-    public void onBackPressed(){
+    private void createDatabase(){
+        //Get helper
+        DatabaseHelper dbHelper = new DatabaseHelper(getBaseContext());
+
+        //Get database
+        //If it doesn't exist then create one
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        //Create entries
+        ContentValues values = new ContentValues();
+
+        values.put(DatabaseContract.HeroTable.NAME_COL2, "Genji");
+
+        //INSERT into Database
+        //returns unigue value for new row
+        long newRowId;
+        newRowId = db.insert(
+                DatabaseContract.HeroTable.TABLE_NAME,
+                null,
+                values
+        );
+
 
     }
 
+    //Adapter used to populate the ViewPager with fragments
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
         String[] titles = {"Heroes", "Maps", "User Stats"};

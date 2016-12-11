@@ -53,8 +53,7 @@ public class HeroDetailActivity extends AppCompatActivity{
         heroShield = (TextView)findViewById(R.id.hero_shield);
         heroTotal = (TextView)findViewById(R.id.hero_total);
 
-
-        //Specify which hero to get data for using heroNum
+        //Specify which hero to get data for, using heroNum
         hero = new Hero(heroNum, this);
         //Set up hero's basic info
         setBasicInfo();
@@ -89,6 +88,12 @@ public class HeroDetailActivity extends AppCompatActivity{
         listView.setAdapter(adapter);
     }
 
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //
+    //Look into filters for this
+    //
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     public class AbilityListAdapter extends ArrayAdapter<Hero>{
         Context context;
         public AbilityListAdapter(Context context, ArrayList<Hero> heroes){
@@ -98,7 +103,9 @@ public class HeroDetailActivity extends AppCompatActivity{
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
+            //Get Database
             Hero currentHero = getItem(position);
+
             final ArrayList<String> primaryInfo = currentHero.getPrimaryInfo();
             final ArrayList<String> secondaryInfo = currentHero.getSecondaryInfo();
             final ArrayList<String> passiveInfo = currentHero.getPassiveInfo();
