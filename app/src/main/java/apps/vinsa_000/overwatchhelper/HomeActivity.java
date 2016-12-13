@@ -27,31 +27,9 @@ public class HomeActivity extends AppCompatActivity {
         //Set up the TabLayout and connect to the ViewPager
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
-    }
 
-    private void createDatabase(){
-        //Get helper
-        DatabaseHelper dbHelper = new DatabaseHelper(getBaseContext());
-
-        //Get database
-        //If it doesn't exist then create one
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-
-        //Create entries
-        ContentValues values = new ContentValues();
-
-        values.put(DatabaseContract.HeroTable.NAME_COL2, "Genji");
-
-        //INSERT into Database
-        //returns unigue value for new row
-        long newRowId;
-        newRowId = db.insert(
-                DatabaseContract.HeroTable.TABLE_NAME,
-                null,
-                values
-        );
-
-
+        //Create Database
+        Database db = new Database(this);
     }
 
     //Adapter used to populate the ViewPager with fragments

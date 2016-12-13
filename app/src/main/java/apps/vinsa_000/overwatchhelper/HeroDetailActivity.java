@@ -2,6 +2,8 @@ package apps.vinsa_000.overwatchhelper;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +23,7 @@ public class HeroDetailActivity extends AppCompatActivity{
     private Intent intent;
     ListView listView;
     Hero hero;
+    int heroNum;
 
     ImageView heroPortrait;
     TextView heroName;
@@ -39,7 +42,7 @@ public class HeroDetailActivity extends AppCompatActivity{
 
         //Grab intent and heroNum
         intent = getIntent();
-        int heroNum = intent.getIntExtra("Hero Number", Constants.NO_NUM);
+        heroNum = intent.getIntExtra("Hero Number", Constants.NO_NUM);
 
         //Initialize necessary views
         listView = (ListView)findViewById(R.id.hero_ability_list);
@@ -55,25 +58,74 @@ public class HeroDetailActivity extends AppCompatActivity{
 
         //Specify which hero to get data for, using heroNum
         hero = new Hero(heroNum, this);
+
+
         //Set up hero's basic info
         setBasicInfo();
+
+
         //Set up hero's abilities list
         setUpAbilityListView();
     }
 
     //Gets a certain hero's basic info and displays it
     private void setBasicInfo(){
-        ArrayList<String> heroBasicInfo = hero.getBasicInfo();
+        //ArrayList<String> heroBasicInfo = hero.getBasicInfo();
+        //Create DatabaseHelper and open readable database
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
 
-        heroName.setText("Name: " + heroBasicInfo.get(0));
-        heroAge.setText("Age: " + heroBasicInfo.get(2));
-        heroHeight.setText("Height: " + heroBasicInfo.get(1));
-        heroDifficulty.setText("Difficulty: " + heroBasicInfo.get(3));
-        heroHealth.setText("Health: " + heroBasicInfo.get(4));
-        heroArmor.setText("Armor: " + heroBasicInfo.get(5));
-        heroShield.setText("Shield: " + heroBasicInfo.get(6));
-        heroTotal.setText("Total: " + heroBasicInfo.get(7));
-        heroPortrait.setImageResource(Integer.parseInt(heroBasicInfo.get(8)));
+        //Columns that are being used
+        String[] projection = {
+                DatabaseContract.HeroTable.NAME_COL2,
+                DatabaseContract.HeroTable.ICON_COL3,
+                DatabaseContract.HeroTable.AGE_COL4,
+                DatabaseContract.HeroTable.HEIGHT_COL5,
+                DatabaseContract.HeroTable.DIFFICULTY_COL6,
+                DatabaseContract.HeroTable.HEALTH_COL7,
+                DatabaseContract.HeroTable.ARMOR_COL8,
+                DatabaseContract.HeroTable.SHIELD_COL9,
+                DatabaseContract.HeroTable.TOTAL_COL10
+        };
+
+        //Query HeroTable using Hero ID
+        String selection  = DatabaseContract.HeroTable.ID_COL1 + " = ?";
+
+        //Put in the heroNum
+        String[] args = {Integer.toString(heroNum)};
+
+        //Query the database
+        Cursor c = db.query(
+                DatabaseContract.HeroTable.TABLE_NAME,
+                projection,
+                selection,
+                args,
+                null,
+                null,
+                null
+        );
+
+        c.moveToFirst();
+        String name = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.NAME_COL2));
+        String icon = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.ICON_COL3));
+        String age = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.AGE_COL4));
+        String height = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.HEIGHT_COL5));
+        String difficulty = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.DIFFICULTY_COL6));
+        String health = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.HEALTH_COL7));
+        String armor = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.ARMOR_COL8));
+        String shield = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.SHIELD_COL9));
+        String total = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.TOTAL_COL10));
+//      String portrait = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.PORTRAIT_COL11));
+
+        heroName.setText("Name: " + name);
+        heroAge.setText("Age: " + age);
+        heroHeight.setText("Height: " + height);
+        heroDifficulty.setText("Difficulty: " + difficulty);
+        heroHealth.setText("Health: " + health);
+        heroArmor.setText("Armor: " + armor);
+        heroShield.setText("Shield: " + shield);
+        heroTotal.setText("Total: " + total);
+        heroPortrait.setImageResource(Integer.parseInt(icon));
     }
     private void setUpAbilityListView() {
         //Populate list of hero info
