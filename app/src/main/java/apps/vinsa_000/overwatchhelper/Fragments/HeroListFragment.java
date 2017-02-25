@@ -1,19 +1,27 @@
-package apps.vinsa_000.overwatchhelper;
+package apps.vinsa_000.overwatchhelper.Fragments;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+
+import apps.vinsa_000.overwatchhelper.Utils.Constants;
+import apps.vinsa_000.overwatchhelper.Activities.HeroDetailActivity;
+import apps.vinsa_000.overwatchhelper.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HeroListFragment extends Fragment {
+
+    private static final String TAG = "HeroListFragment";
+
     private FrameLayout genjiFrame, mccreeFrame, pharahFrame, reaperFrame, soldierFrame, tracerFrame, bastionFrame, hanzoFrame,
             junkratFrame, meiFrame, torbjornFrame, widowmakerFrame, dvaFrame, reinhardtFrame, roadhogFrame, winstonFrame,
             zaryaFrame, anaFrame, lucioFrame, mercyFrame, symmetraFrame, zenyattaFrame;
@@ -82,6 +90,7 @@ public class HeroListFragment extends Fragment {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, heroNum + "");
                 Intent intent = new Intent(getContext(), HeroDetailActivity.class);
                 intent.putExtra("Hero Number", heroNum);
                 startActivity(intent);

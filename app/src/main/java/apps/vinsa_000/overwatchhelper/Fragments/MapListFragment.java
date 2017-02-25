@@ -1,14 +1,17 @@
-package apps.vinsa_000.overwatchhelper;
+package apps.vinsa_000.overwatchhelper.Fragments;
 
 
 import android.content.Intent;
-import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+
+import apps.vinsa_000.overwatchhelper.Utils.Constants;
+import apps.vinsa_000.overwatchhelper.Activities.MapDetailActivity;
+import apps.vinsa_000.overwatchhelper.R;
 
 
 /**

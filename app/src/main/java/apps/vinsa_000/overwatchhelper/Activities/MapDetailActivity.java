@@ -1,9 +1,12 @@
-package apps.vinsa_000.overwatchhelper;
+package apps.vinsa_000.overwatchhelper.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import apps.vinsa_000.overwatchhelper.Utils.Constants;
+import apps.vinsa_000.overwatchhelper.R;
 
 public class MapDetailActivity extends AppCompatActivity {
     private ImageView mapPic;

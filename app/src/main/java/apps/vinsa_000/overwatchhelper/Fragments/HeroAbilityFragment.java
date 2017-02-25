@@ -1,4 +1,4 @@
-package apps.vinsa_000.overwatchhelper;
+package apps.vinsa_000.overwatchhelper.Fragments;
 
 
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import apps.vinsa_000.overwatchhelper.R;
 
 
 /**
@@ -131,7 +133,7 @@ public class HeroAbilityFragment extends DialogFragment {
             infoItem.setLayoutParams(itemParams);
             abilityItem.addView(infoItem);
 
-            /*abilityData.add("test"); TODO: 11/4/2016  Add any optional data to row layout
+            /*abilityData.add("test"); TODO: 11/4/2016  Add an optional data to row layout
             int optionalData = (4 + (2 * offSet));
             if(abilityData.size() > optionalData && abilityData.get(optionalData) != null){
                 //Set up optional TextView

@@ -1,4 +1,4 @@
-package apps.vinsa_000.overwatchhelper;
+package apps.vinsa_000.overwatchhelper.Fragments;
 
 
 import android.content.SharedPreferences;
@@ -9,7 +9,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
+import apps.vinsa_000.overwatchhelper.R;
 
 
 /**

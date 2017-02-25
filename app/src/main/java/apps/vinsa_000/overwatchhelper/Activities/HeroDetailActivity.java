@@ -1,13 +1,13 @@
-package apps.vinsa_000.overwatchhelper;
+package apps.vinsa_000.overwatchhelper.Activities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +19,17 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import apps.vinsa_000.overwatchhelper.Utils.Constants;
+import apps.vinsa_000.overwatchhelper.Database.DatabaseContract;
+import apps.vinsa_000.overwatchhelper.Database.DatabaseHelper;
+import apps.vinsa_000.overwatchhelper.Fragments.HeroAbilityFragment;
+import apps.vinsa_000.overwatchhelper.Database.Hero;
+import apps.vinsa_000.overwatchhelper.R;
+
 public class HeroDetailActivity extends AppCompatActivity{
+
+    private static final String TAG = "HeroDetailActivity";
+
     private Intent intent;
     ListView listView;
     Hero hero;
@@ -43,6 +53,7 @@ public class HeroDetailActivity extends AppCompatActivity{
         //Grab intent and heroNum
         intent = getIntent();
         heroNum = intent.getIntExtra("Hero Number", Constants.NO_NUM);
+        Log.i(TAG, heroNum + "");
 
         //Initialize necessary views
         listView = (ListView)findViewById(R.id.hero_ability_list);
@@ -57,7 +68,7 @@ public class HeroDetailActivity extends AppCompatActivity{
         heroTotal = (TextView)findViewById(R.id.hero_total);
 
         //Specify which hero to get data for, using heroNum
-        hero = new Hero(heroNum, this);
+        hero = new Hero();
 
 
         //Set up hero's basic info
@@ -77,10 +88,10 @@ public class HeroDetailActivity extends AppCompatActivity{
 
         //Columns that are being used
         String[] projection = {
-                DatabaseContract.HeroTable.NAME_COL2,
-                DatabaseContract.HeroTable.ICON_COL3,
-                DatabaseContract.HeroTable.AGE_COL4,
-                DatabaseContract.HeroTable.HEIGHT_COL5,
+                DatabaseContract.HeroTable.NAME_COL3,
+                DatabaseContract.HeroTable.ICON_COL12,
+                DatabaseContract.HeroTable.AGE_COL5,
+                DatabaseContract.HeroTable.HEIGHT_COL4,
                 DatabaseContract.HeroTable.DIFFICULTY_COL6,
                 DatabaseContract.HeroTable.HEALTH_COL7,
                 DatabaseContract.HeroTable.ARMOR_COL8,
@@ -106,16 +117,16 @@ public class HeroDetailActivity extends AppCompatActivity{
         );
 
         c.moveToFirst();
-        String name = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.NAME_COL2));
-        String icon = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.ICON_COL3));
-        String age = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.AGE_COL4));
-        String height = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.HEIGHT_COL5));
+        String name = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.NAME_COL3));
+        String icon = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.ICON_COL12));
+        String age = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.AGE_COL5));
+        String height = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.HEIGHT_COL4));
         String difficulty = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.DIFFICULTY_COL6));
         String health = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.HEALTH_COL7));
         String armor = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.ARMOR_COL8));
         String shield = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.SHIELD_COL9));
         String total = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.TOTAL_COL10));
-//      String portrait = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.PORTRAIT_COL11));
+//      String portrait = c.getString(c.getColumnIndex(DatabaseContract.HeroTable.PORTRAIT_COL13));
 
         heroName.setText("Name: " + name);
         heroAge.setText("Age: " + age);
@@ -125,12 +136,12 @@ public class HeroDetailActivity extends AppCompatActivity{
         heroArmor.setText("Armor: " + armor);
         heroShield.setText("Shield: " + shield);
         heroTotal.setText("Total: " + total);
-        heroPortrait.setImageResource(Integer.parseInt(icon));
+        //heroPortrait.setImageResource(Integer.parseInt(icon));
     }
     private void setUpAbilityListView() {
         //Populate list of hero info
         ArrayList<Hero> heroInfo = new ArrayList<Hero>();
-        for(int i = 0; i < hero.getNumAbilities(); i++){
+        for(int i = 0; i < 5; i++){
             Hero temp = hero;
             heroInfo.add(temp);
         }
@@ -158,12 +169,12 @@ public class HeroDetailActivity extends AppCompatActivity{
             //Get Database
             Hero currentHero = getItem(position);
 
-            final ArrayList<String> primaryInfo = currentHero.getPrimaryInfo();
-            final ArrayList<String> secondaryInfo = currentHero.getSecondaryInfo();
-            final ArrayList<String> passiveInfo = currentHero.getPassiveInfo();
-            final ArrayList<String> skill1Info = currentHero.getSkill1Info();
-            final ArrayList<String> skill2Info = currentHero.getSkill2Info();
-            final ArrayList<String> ultInfo = currentHero.getUltInfo();
+            final ArrayList<String> primaryInfo = new ArrayList<String>();
+            final ArrayList<String> secondaryInfo = new ArrayList<String>();
+            final ArrayList<String> passiveInfo = new ArrayList<String>();
+            final ArrayList<String> skill1Info = new ArrayList<String>();
+            final ArrayList<String> skill2Info = new ArrayList<String>();
+            final ArrayList<String> ultInfo = new ArrayList<String>();
 
             if(convertView == null){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_listview, parent, false);

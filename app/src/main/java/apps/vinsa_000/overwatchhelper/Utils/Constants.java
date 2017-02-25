@@ -1,4 +1,4 @@
-package apps.vinsa_000.overwatchhelper;
+package apps.vinsa_000.overwatchhelper.Utils;
 
 /**
  * Created by vinsa_000 on 9/17/2016.

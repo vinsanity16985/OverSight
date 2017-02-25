@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="apps.vinsa_000.overwatchhelper.HomeActivity">
+    tools:context=".Activities.HomeActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar_layout"
         android:layout_height="wrap_content"

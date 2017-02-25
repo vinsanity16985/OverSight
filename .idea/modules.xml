@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OverSeer.iml" filepath="$PROJECT_DIR$/OverSeer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OverSight.iml" filepath="$PROJECT_DIR$/OverSight.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

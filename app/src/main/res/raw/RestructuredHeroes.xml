@@ -1,0 +1,3577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<heroes>
+    <type name="offense">
+        <hero>
+            <basic>
+                <id>1</id>
+                <nickname>Genji</nickname>
+                <name>Genji Shimada</name>
+                <height>5'8</height>
+                <age>35</age>
+                <difficulty>3</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Shuriken</name>
+                <description>Genji looses three deadly throwing stars in quick
+                    succession.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>28 per projectile</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>47 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1 shot per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>24</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>3 rounds per shot</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1 second</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Fan of Blades</name>
+                <description>Genji throws three deadly throwing stars in a wide
+                    spread.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>28 per projectile</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>47 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1.33 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>24</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>3 rounds per shot</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1 second</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>              
+            </secondary>
+            <passive>
+                <name>Cyber-Agility</name>
+                <description>Thanks to his cybernetic abilities, Genji can climb walls and perform
+                    jumps in mid-air.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Non-Damaging Movement</value>
+                </item>                     
+            </passive>
+            <skill1>
+                <name>Swift Strike</name>
+                <description>Genji darts forward, slashing with his katana and passing through foes in
+                    his path. If Genji eliminates a target, he can instantly use this ability
+                    again.</description>
+                <item>
+                    <title>Damage</title>
+                    <value>50</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>35 m/s</value>
+                </item>
+                <item>
+                    <title>Max Range</title>
+                    <value>14 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>0.4 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>                            
+            </skill1>
+            <skill2>
+                <name>Deflect</name>
+                <description>With lightning-quick swipes of his sword, Genji reflects any oncoming
+                    projectiles and can send them rebounding towards his enemies.</description>
+                <item>
+                    <title>Duration</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>                
+            </skill2>
+            <ultimate>
+                <name>Dragonblade</name>
+                <description>Genji brandishes his katana for a brief period of time. Until he sheathes
+                    his sword, Genji can deliver killing strikes to any targets within his
+                    reach.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Melee</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>120 per swing</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>8 m/s</value>
+                </item>
+                <item>
+                    <title>Max Range</title>
+                    <value>5 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1 swing per sec</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1200 points</value>
+                </item>                
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>2</id>
+                <nickname>McCree</nickname>
+                <name>Jesse McCree</name>
+                <height>6'1</height>
+                <age>37</age>
+                <difficulty>2</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Peacekeeper</name>
+                <description>McCree fires off a round from his trusty
+                    six-shooter.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Single Shot Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>20 - 70</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>20 - 45 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>2 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>6</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Fan the Hammer</name>
+                <description>He can fan the Peacekeeper's hammer to swiftly unload the entire
+                    cylinder.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>22 - 45</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>18 - 30 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>6 shots over 0.67 sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>6</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>Up to 6</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Combat Roll</name>
+                <description>McCree dives in the direction he's moving, effortlessly reloading his
+                    Peacekeeper in the process.</description>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>6 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>0.5 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Flashbang</name>
+                <description>McCree heaves a blinding grenade that explodes shortly after it leaves
+                    his hand. The blast staggers enemies in a small radius.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>25</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>5 meters</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>2 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>0.7 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Deadeye</name>
+                <description>McCree takes a few precious moments to aim; when he's ready to fire, he
+                    shoots every enemy in his line of sight.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>250 per sec</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>2 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>6 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>1 per target</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Up to 6 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1200 points</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>3</id>
+                <nickname>Pharah</nickname>
+                <name>Fareeha Amari</name>
+                <height>5'11</height>
+                <age>32</age>
+                <difficulty>1</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Rocket Launcher</name>
+                <description>Pharah's primary weapon launches rockets that deal significant damage
+                    in a wide blast radius.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>10 - 120</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>28.5 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>3 meter radius</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1.1 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>6</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1 second</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </primary>
+            <passive>
+                <name>Hover Jets</name>
+                <description>Pharah hovers in mid-air.</description>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>5.5 m/s</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>2 seconds</value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Jump Jet</name>
+                <description>Propelled by her suit's thrusters, Pharah soars high into the
+                    air.</description>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>20 meters</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Concussive Blast</name>
+                <description>Pharah looses a wrist rocket that knocks back any enemies it
+                    strikes.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>Knockback</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>57 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>8 meter radius</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>12 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Barrage</name>
+                <description>Pharah directs a continuous barrage of mini-rockets to destroy groups of
+                    enemies.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>40 per rocket</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>Immobilized</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>28.5 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>30 rockets per sec</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1200 points</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>4</id>
+                <nickname>Reaper</nickname>
+                <name>Gabriel Reyes</name>
+                <height>6'1</height>
+                <age>56</age>
+                <difficulty>1</difficulty>
+                <health>250</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>250</total>
+            </basic>
+            <primary>
+                <name>Hellfire Shotguns</name>
+                <description>Reaper tears enemies apart with twin shotguns.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Shotgun</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>2 - 7 per pellet</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>11 - 20 meters</value>
+                </item>
+                <item>
+                    <title>Number of Pellets</title>
+                    <value>20 per shot</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>2 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>8</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <passive>
+                <name>The Reaping</name>
+                <description>Reaper collects souls from fallen enemies to replenish his
+                    health.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>50 per globe</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>5 meter radius</value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Wraith Form</name>
+                <description>Reaper becomes a shadow for a short period of time. While in this form,
+                    he takes no damage and is able to pass through enemies, but cannot fire his weapons or
+                    use other abilities.</description>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>7.1 m/s</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Shadow Step</name>
+                <description>After marking a destination, Reaper disappears and reappears at that
+                    location.</description>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>35 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>2 seconds cast</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Death Blossom</name>
+                <description>In a blur of motion, Reaper empties both hellfire shotguns at breakneck
+                    speed, dealing massive damage to all nearby enemies.</description>
+                <item>
+                    <title>Damage</title>
+                    <value>510</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>3 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>8 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1500</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>5</id>
+                <nickname>Soldier 76</nickname>
+                <name>Jack Morrison</name>
+                <height>6'1</height>
+                <age>55</age>
+                <difficulty>1</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Heavy Pulse Rifle</name>
+                <description>Soldier: 76's rifle remains particularly steady while unloading
+                    fully-automatic pulse fire.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>5 - 17</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>35 - 55 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>10 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>25</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Helix Rockets</name>
+                <description>Tiny rockets spiral out of Soldier: 76's Pulse Rifle in a single
+                    burst. The rockets' explosion damages enemies in a small
+                    radius.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>120</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>40 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>2 meter radius</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Sprint</name>
+                <description>Whether he needs to evade a firefight or get back into one, Soldier: 76
+                    can rush ahead in a burst of speed. His sprint ends if he takes an action other than
+                    charging forward.</description>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>8.33 m/s</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Until Cancelled</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Biotic Field</name>
+                <description>Soldier: 76 plants a biotic emitter on the ground. Its energy projection
+                    restores health to 76 and any of his squadmates within the field.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>40 health per sec</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>5 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>5 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>15 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Tactical Visor</name>
+                <description>Soldier: 76's pinpoint targeting visor locks his aim on the threat
+                    closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly
+                    switch to another target.</description>
+                <item>
+                    <title>Duration</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1660</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>6</id>
+                <nickname>Tracer</nickname>
+                <name>Lena Oxton</name>
+                <height>5'4</height>
+                <age>26</age>
+                <difficulty>2</difficulty>
+                <health>150</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>150</total>
+            </basic>
+            <primary>
+                <name>Pulse Pistols</name>
+                <description>Tracer rapid-fires both of her pistols.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>3 - 12 per shot</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>11 - 30 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>20 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>40</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>2 rounds per shot</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1 second</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <skill1>
+                <name>Blink</name>
+                <description>Tracer zips horizontally through space in the direction she's moving,
+                    and re-appears several yards away. She stores up to three charges of the blink ability
+                    and generates more every few seconds.</description>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>7 meters</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>3 charges</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>3 seconds per charge</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Recall</name>
+                <description>Tracer bounds backward in time, returning her health, ammo and position
+                    on the map to precisely where they were a few seconds before.</description>
+                <item>
+                    <title>Duration</title>
+                    <value>Rewinds 3 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>12 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Pulse Bomb</name>
+                <description>Tracer lobs a large bomb that adheres to any surface or unfortunate opponent
+                    it lands on. After a brief delay, the bomb explodes, dealing high damage to all enemies
+                    within its blast radius.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>400</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>3 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>1 second cast</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>900</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>7</id>
+                <nickname>Sombra</nickname>
+                <name>Unknown</name>
+                <height>Unknown</height>
+                <age>30</age>
+                <difficulty>3</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Machine Pistol</name>
+                <description>Sombra's fully-automatic machine pistol fires in a short-range spread.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>2.4 - 8</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>15 - 25 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>20 rounds per second</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>60</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Hack</name>
+                <description>Sombra hacks enemies to temporarily stop them from using their abilities, or hacks first aid kits to spawn faster and make them useless to her opponents. Taking damage interrupts the hack attempt.</description>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>15 meters</value>
+                </item>
+                <item>
+                    <title>Casting Time</title>
+                    <value>0.8 seconds</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+            </secondary>
+            <passive>
+                <name>Opportunist</name>
+                <description>Sombra detects critically injured enemies through walls. This effect becomes active on an enemy if they fall below half health.</description>
+                <item>
+                    <title></title>
+                    <value></value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Thermoptic Camo</name>
+                <description>Sombra becomes invisible for a short period of time, during which her speed is boosted considerably. Attacking, using offensive abilities, or taking damage disables her camouflage.</description>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>8.8 m/s</value>
+                </item>
+                <item>
+                    <title>Casting Time</title>
+                    <value>0.7 seconds</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>6 seconds</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Translocator</name>
+                <description>Sombra tosses out a translocator beacon. She can instantly return to the beacon's location while it is active (including when it's in mid-flight).</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arcing Projectile</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>15 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>6 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>EMP</name>
+                <description>Sombra discharges electromagnetic energy in a wide radius, destroying enemy barriers and shields and hacking all opponents caught in the blast.</description>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>15 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1250</value>
+                </item>
+            </ultimate>
+        </hero>        
+    </type>
+    <type name="defense">
+        <hero>
+            <basic>
+                <id>8</id>
+                <nickname>Bastion</nickname>
+                <name>SST Laboratories Siege Automaton E54</name>
+                <height>7'3</height>
+                <age>30</age>
+                <difficulty>1</difficulty>
+                <health>200</health>
+                <armor>100</armor>
+                <shield>0</shield>
+                <total>300</total>
+            </basic>
+            <primary>
+                <name>Configuration: Recon</name>
+                <description>In Recon mode, Bastion is fully mobile, outfitted with a submachine gun
+                    that fires steady bursts of bullets at medium range.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>6 - 20</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>26 - 50 meters</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>5.5 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>8 rounds per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>20</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Configuration: Sentry</name>
+                <description>In Sentry mode, Bastion is a stationary powerhouse equipped with a
+                    gatling gun capable of unleashing a hail of bullets. The gun's aim can be "walked"
+                    across multiple targets, dealing devastating damage at short to medium
+                    range.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>4 - 15</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>35 - 55 meters</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>Immobilized</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>35 rounds per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>200</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Reconfigure</name>
+                <description>Bastion transforms between its two primary combat modes to adapt to
+                    changing battlefield conditions.</description>
+                <item>
+                    <title>Duration</title>
+                    <value>0.5 or 1.5</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>None</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Self-Repair</name>
+                <description>Bastion restores its health; it cannot move or fire weapons while the
+                    repair process is in effect.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>75 health per sec</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>Immobilized</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>None</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Configuration: Tank</name>
+                <description>In Tank mode, Bastion extends wheeled treads and a powerful long-range
+                    cannon. The cannon's explosive shells demolish targets in a wide blast radius, but
+                    Bastion can only remain in this mode for a limited time.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Health</title>
+                    <value>450</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>205</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>5.5 m/s</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>44 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>4 meter radius</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1.11 per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>Infinite</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>8 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1650</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>9</id>
+                <nickname>Hanzo</nickname>
+                <name>Hanzo Shimada</name>
+                <height>5'8</height>
+                <age>38</age>
+                <difficulty>3</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Storm Bow</name>
+                <description>Hanzo nocks and fires an arrow at his target.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arching Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>29 - 125</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>3.85 m/s</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>26 - 86.66 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>5 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>Infinite</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <passive>
+                <name>Wall Climb</name>
+                <description>Hanzo can climb any vertical surface.</description>
+                <item>
+                    <title></title>
+                    <value></value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Sonic Arrow</name>
+                <description>Hanzo launches an arrow that contains a sonar tracking device. Any enemy
+                    within its detection radius is visibly marked, making them easier for Hanzo and his
+                    allies to hunt down.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arcing Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>29 - 125</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>26 - 86.66 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>10 meter radius</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>0.5 shots per sec</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>20 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Scatter Arrow</name>
+                <description>Hanzo shoots a fragmenting arrow that ricochets off walls and objects and
+                    can strike multiple targets at once.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arcing Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>75 per arrow</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>26 - 86.66 m/s</value>
+                </item>
+                <item>
+                    <title>Number of Pellets</title>
+                    <value>6 scatter arrows</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>0.5 shots per sec</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Dragonstrike</name>
+                <description>Hanzo summons a Spirit Dragon which travels through the air in a line. It
+                    passes through walls in its way, devouring any enemies it encounters.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>200 per sec</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>Infinite</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>4 meter radius</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1200</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>10</id>
+                <nickname>Junkrat</nickname>
+                <name>Jamison Fawkes</name>
+                <height>6'6</height>
+                <age>25</age>
+                <difficulty>2</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Frag Launcher</name>
+                <description>Junkrat's Frag Launcher lobs grenades a significant distance. They
+                    bounce to reach their destination, and blow up when they strike an
+                    enemy.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>120</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>17.5 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>2 meter radius</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1.66 shots per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>5</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </primary>
+            <passive>
+                <name>Total Mayhem</name>
+                <description>Junkrat's deranged sense of humor persists past his death. If killed, he
+                    drops several live grenades.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>60 per pellet</value>
+                </item>
+                <item>
+                    <title>Number of Pellets</title>
+                    <value>5</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Concussion Mine</name>
+                <description>After placing one of his homemade Concussion Mines, Junkrat can trigger
+                    it to damage enemies and send them flying... or propel himself through the
+                    air.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>120</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>17.5 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>3 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Until detonation</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Steel Trap</name>
+                <description>Junkrat tosses out a giant, metal-toothed trap. Should an enemy wander
+                    too close to the trap, it clamps on, injuring and immobilizing them.</description>
+                <item>
+                    <title>Damage</title>
+                    <value>80</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>1 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>RIP-Tire</name>
+                <description>Junkrat revs up a motorized tire bomb and sends it rolling across the
+                    battlefield, climbing over walls and obstacles. He can remotely detonate the RIP-Tire to
+                    deal serious damage to enemies caught within the blast, or just wait for it to explode
+                    on its own.</description>
+                <item>
+                    <title>Health</title>
+                    <value>100</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>600</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>10 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>10 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Up to 10 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1250</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>11</id>
+                <nickname>Mei</nickname>
+                <name>Mei-Ling Zhou</name>
+                <height>Unknown</height>
+                <age>31</age>
+                <difficulty>3</difficulty>
+                <health>250</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>250</total>
+            </basic>
+            <primary>
+                <name>Endothermic Blaster</name>
+                <description>Mei's blaster unleashes a concentrated, short-range stream of frost that
+                    damages, slows, and ultimately freezes enemies in place.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Beam</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>45 per sec</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>20 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>10 meters</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>200</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>20 rounds per sec</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>1.5 sec until freeze</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Icicle</name>
+                <description>Mei can use her blaster to shoot icicle-like projectiles at medium
+                    range.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>22 - 75</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>26 - 55 meters</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>88.88 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1 shot per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>200</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>25 per shot</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Cryo-Freeze</name>
+                <description>Mei instantly surrounds herself with a block of thick ice. She heals and
+                    ignores damage while encased, but cannot move or use abilities.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>37.5 health per sec</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>4 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>12 seconds</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Ice Wall</name>
+                <description>Mei generates an enormous ice wall that obstructs lines of sight, stops
+                    movement, and blocks attacks.</description>
+                <item>
+                    <title>Health</title>
+                    <value>500 per pillar</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>35 meters</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>3 x 8 meter area</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>4.5 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Blizzard</name>
+                <description>Mei deploys a weather-modification drone that emits gusts of wind and snow
+                    in a wide area. Enemies caught in the blizzard are slowed and take damage; those who
+                    linger too long are frozen solid.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>10 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1000</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>12</id>
+                <nickname>Torbjorn</nickname>
+                <name>Torbjorn Lindholm</name>
+                <height>4'7</height>
+                <age>57</age>
+                <difficulty>2</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Rivet Gun</name>
+                <description>Torbjorn fires rivets at long range, or ejects molten metal from his gun
+                    in a short, close-range burst.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arcing Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>70 per shot</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>57 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>2 rounds per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>18</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Rivet Gun</name>
+                <description>Torbjorn ejects molten metal from his gun in a short, close-range burst.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Shotgun</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>6 - 15 per pellet</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>7 - 20 meters</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>80 m/s</value>
+                </item>
+                <item>
+                    <title>Number of pellets</title>
+                    <value>10 per shot</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1.25 rounds per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>18</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>3 per shot</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>2 Seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </secondary>
+            <passive>
+                <name>Scrap Collector</name>
+                <description>Collect scrap to gain resources.</description>
+                <item>
+                    <title>Ammo</title>
+                    <value>200 scrap</value>
+                </item>
+                <item>
+                    <title>Gain</title>
+                    <value>+25 scrap</value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Build Turret</name>
+                <description>Torbjorn constructs an enemy-tracking autocannon. He can use his Forge
+                    Hammer to repair or upgrade it, increasing its health and adding a second cannon barrel
+                    and a rocket launcher.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Hitscan Projectile</value>
+                </item>
+                <item>
+                    <title>Health</title>
+                    <value>150/300/800</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>14 per round</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>40/40/40 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>2/4/5 rds a sec</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Until Destroyed</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Armor Pack</name>
+                <description>Torbjorn deploys an armor upgrade; either he or his allies can pick it up
+                    to absorb some damage.</description>
+                <item>
+                    <title>Health</title>
+                    <value>+75 armor</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>12 m/s</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>200 scrap</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>50 scrap</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Molten Core</name>
+                <description>After overheating his personal forge, Torbjorn gains a significant amount
+                    of armor. He also attacks (and builds and repairs turrets) far faster than
+                    normal.</description>
+                <item>
+                    <title>Health</title>
+                    <value>500</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>+50%</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>12 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1300</value>
+                </item>
+            </ultimate>
+            <optional>
+                <name>Forge Hammer</name>
+                <description>Torbjorn uses his multipurpose hammer to build, upgrade and repair
+                    turrets. In a pinch, it can also be swung as a weapon.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Melee</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>75</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1 swing per sec</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </optional>
+        </hero>
+        <hero>
+            <basic>
+                <id>13</id>
+                <nickname>Widowmaker</nickname>
+                <name>Amelie Lacroix</name>
+                <height>5'9</height>
+                <age>33</age>
+                <difficulty>2</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Widow's Kiss</name>
+                <description>Should targets close to medium range, the rifle can also be fired in
+                    fully-automatic mode.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>13</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>10 per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>30</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Sniper Mode</name>
+                <description>Widowmaker's versatile sniper rifle is ideal for scope-aimed shots at
+                    distant targets.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Single Shot Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>120</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>1.9 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>0.5 - 1.4 per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>30</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>3 per shot</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>0.9 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Grappling Hook</name>
+                <description>Widowmaker launches a grappling hook towards the location she's aiming
+                    at, when the hook connects with a scalable surface, she's quickly drawn towards it,
+                    allowing her to expand her view of the battlefield and evade or flank
+                    targets.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>16 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>20 meters</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>12 seconds</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Venom Mine</name>
+                <description>Widowmaker adheres a swiftly-arming venom mine to nearly any surface.
+                    When a target wanders within range of the mine's motion trigger, it explodes, delivering
+                    poison gas to any enemies in the vicinity.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arcing Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>15 per sec</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>19 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>3 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>5 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>15 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Infra-Sight</name>
+                <description>Widowmaker's recon visor allows her to see the heat signatures of her
+                    targets through walls and objects for a moderate amount of time. This enhanced vision is
+                    shared with her allies.</description>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>Map Wide</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>15.5 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1100</value>
+                </item>
+            </ultimate>
+        </hero>
+    </type>
+    <type name="tank">
+        <hero>
+            <basic>
+                <id>14</id>
+                <nickname>D.Va</nickname>
+                <name>Hana Song</name>
+                <height>Unknown</height>
+                <age>19</age>
+                <difficulty>2</difficulty>
+                <health>100</health>
+                <armor>400</armor>
+                <shield>0</shield>
+                <total>500</total>
+            </basic>
+            <primary>
+                <name>Fusion Cannons</name>
+                <description>D.Va's mech is equipped with twin short-range rotating cannons. They lay
+                    down continuous, high-damage fire without needing to reload, but slow D.Va's movement
+                    while they're active.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Shotgun</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>0.9 - 3</value>
+                </item>
+                <item>
+                    <title>Falloff Range</title>
+                    <value>10 - 20 meters</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>1.33 m/s</value>
+                </item>
+                <item>
+                    <title>Number of Pellets</title>
+                    <value>8 per shot</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>6.67 per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>Infinite</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Defense Matrix</name>
+                <description>D.Va can activate this forward-facing targeting array to shoot
+                    incoming projectiles out of the air.</description>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>15 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Up to 4 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+            </secondary>
+            <passive>
+                <name>Eject</name>
+                <description>D.Va ejects out of her mech when it is destroyed.</description>
+                <item>
+                    <title></title>
+                    <value></value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Boosters</name>
+                <description>D.Va's mech launches into the air, her momentum carrying her forward. She
+                    can turn and change directions or barrel through her enemies, knocking them
+                    back.</description>
+                <item>
+                    <title>Damage</title>
+                    <value>25 + Knockback</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>12.5 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>Up to 25 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Up to 2 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name></name>
+                <description></description>
+                <item>
+                    <title></title>
+                    <value></value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Self-Destruct</name>
+                <description>D.Va ejects from her mech and sets its reactor to explode, dealing massive
+                    damage to nearby opponents.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>1000</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>20 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 second delay</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1100</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>15</id>
+                <nickname>Reinhardt</nickname>
+                <name>Reinhardt Wilhelm</name>
+                <height>7'4</height>
+                <age>61</age>
+                <difficulty>1</difficulty>
+                <health>300</health>
+                <armor>200</armor>
+                <shield>0</shield>
+                <total>500</total>
+            </basic>
+            <primary>
+                <name>Rocket Hammer</name>
+                <description>Reinhardt's Rocket Hammer is an exemplary melee weapon, able to deal
+                    punishing damage in a wide arc with every swing.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Melee</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>75</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>5 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1 swing per sec</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Barrier Field</name>
+                <description>Reinhardt projects a broad, forward-facing energy barrier, which can
+                    absorb substantial damage before it is destroyed. Although Reinhardt can protect himself
+                    and his companions behind the barrier, he cannot attack while sustaining
+                    it.</description>
+                <item>
+                    <title>Health</title>
+                    <value>2000</value>
+                </item>
+                <item>
+                    <title>Healing</title>
+                    <value>225 shield per sec</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>2.75 m/s</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>5 seconds</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Charge</name>
+                <description>Reinhardt charges forth in a straight line, pinning the first enemy in
+                    his path and knocking others aside. If he collides with a wall, the foe he's carrying
+                    suffers extreme damage.</description>
+                <item>
+                    <title>Damage</title>
+                    <value>300</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>16.66 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>55 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>0.7 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Fire Strike</name>
+                <description>By whipping his Rocket Hammer forward, Reinhardt slings a flaming
+                    projectile which pierces and damages any enemies it touches.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>100</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>26.66 m/s</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Earthshatter</name>
+                <description>Reinhardt forcefully slams his rocket hammer into the ground, knocking down
+                    and damaging all enemies in front of him.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Area of Effect</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>50</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>2.5 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1100</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>16</id>
+                <nickname>Roadhog</nickname>
+                <name>Mako Rutledge</name>
+                <height>7'3</height>
+                <age>48</age>
+                <difficulty>1</difficulty>
+                <health>600</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>600</total>
+            </basic>
+            <primary>
+                <name>Scrap Gun</name>
+                <description>Roadhog's Scrap Gun fires short-range blasts of shrapnel with a wide
+                    spread.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Shotgun</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>2 - 9 per pellet</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>57 m/s</value>
+                </item>
+                <item>
+                    <title>Number of Pellets</title>
+                    <value>25 pellets per shot</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1 shot per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>4</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Scrap Gun</name>
+                <description>Alternatively, it can launch a shrapnel ball that detonates farther away, scattering metal fragments from the point of impact.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear/Shotgun projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>2 - 9 per pellet</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>57 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>9 seconds</value>
+                </item>
+                <item>
+                    <title>Number of Pellets</title>
+                    <value>25 pellets</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1 shot per sec</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>4</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Chain Hook</name>
+                <description>Roadhog hurls his chain at a target; if it catches, he yanks them into
+                    close range.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>30</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>40 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>20 meters</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Take a Breather</name>
+                <description>Roadhog restores a chunk of his health over a brief period of
+                    time.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>300 Health</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Whole Hog</name>
+                <description>After cramming a top-loader onto his Scrap Gun, Roadhog pours in ammo. For a
+                    short time, he can crank out a stream of shrapnel that knocks back
+                    enemies.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Rapid Fire Shotgun</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>5000</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>2.5 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1100</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>17</id>
+                <nickname>Winston</nickname>
+                <name>Winston</name>
+                <height>7'3</height>
+                <age>29</age>
+                <difficulty>2</difficulty>
+                <health>400</health>
+                <armor>100</armor>
+                <shield>0</shield>
+                <total>500</total>
+            </basic>
+            <primary>
+                <name>Tesla Cannon</name>
+                <description>Winston's weapon fires a short-range electric barrage for as long as
+                    he holds down the trigger.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Multitarget Beam</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>60 per sec</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>8 meters</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>6 meter width</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>100</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>20 rounds per second</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </primary>
+            <skill1>
+                <name>Jump Pack</name>
+                <description>Assisted by his energy pack, Winston lunges through the air, dealing
+                    significant damage and staggering nearby enemies when he lands.</description>
+                <item>
+                    <title>Damage</title>
+                    <value>50</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>20 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>22 meters</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>5 meter radius</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Barrier Projector</name>
+                <description>Winston's barrier projector extends a bubble-shaped field that absorbs
+                    damage until it's destroyed. Allies protected by the barrier can return fire from within
+                    it.</description>
+                <item>
+                    <title>Health</title>
+                    <value>600</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>5 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>5 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>13 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Primal Rage</name>
+                <description>Winston embraces his animal nature, significantly boosting his health and
+                    making him very difficult to kill, strengthening his melee attack, and allowing him to
+                    use his Jump Pack ability more frequently. While raging, Winston can only make melee and
+                    Jump Pack attacks.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Melee</value>
+                </item>
+                <item>
+                    <title>Health</title>
+                    <value>+500 Health</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>40 per swing</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>7.1 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>4 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1.6 swings per second</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>10 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1375</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>18</id>
+                <nickname>Zarya</nickname>
+                <name>Aleksandra Zaryanova</name>
+                <height>6'5</height>
+                <age>28</age>
+                <difficulty>3</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>200</shield>
+                <total>400</total>
+            </basic>
+            <primary>
+                <name>Particle Cannon (Beam)</name>
+                <description>Zarya's mighty Particle Cannon unleashes a short-range beam of
+                    destructive energy. Alternatively, Zarya can lob an explosive charge to strike multiple
+                    opponents.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Beam</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>95 per second</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>16 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>20 rounds per second</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>100</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Particle Cannon (Projectile)</name>
+                <description>Zarya can lob an explosive charge to strike multiple
+                    opponents.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arcing Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>45 per shot</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>23.5 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>2 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1 shot per second</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>100</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>25 rounds per second</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </secondary>
+            <passive>
+                <name>Energy</name>
+                <description>Damage blocked increases Particle Cannon damage.</description>
+                <item>
+                    <title>Damage</title>
+                    <value>+1% per point of energy</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>100 points of energy</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>-2 points of energy per second</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>+1 point of energy per 5 points of damage absorbed</value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Particle Barrier</name>
+                <description>The Particle Cannon can emit a personal barrier that shields Zarya
+                    against incoming attacks, redirecting their energy to enhance her weapon's damage and
+                    the width of its beam.</description>
+                <item>
+                    <title>Health</title>
+                    <value>200 barrier</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Projected Barrier</name>
+                <description>Zarya surrounds one of her teammates with an energy barrier that
+                    simultaneously absorbs fire and boosts the power of her Particle
+                    Cannon.</description>
+                <item>
+                    <title>Health</title>
+                    <value>200 barrier</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>30 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>8 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Graviton Surge</name>
+                <description>Zarya launches a gravity bomb that draws in enemy combatants and deals
+                    damage while they're trapped.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arcing Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>5.5 per second</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>23.5 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>9 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>4 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1875</value>
+                </item>
+            </ultimate>
+        </hero>
+    </type>
+    <type name="support">
+        <hero>
+            <basic>
+                <id>19</id>
+                <nickname>Ana</nickname>
+                <name>Ana Amari</name>
+                <height>Unknown</height>
+                <age>60</age>
+                <difficulty>3</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Biotic Rifle</name>
+                <description>Ana's rifle shoots darts that can restore health to her allies or deal
+                    on going damage to her enemies.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>80</value>
+                </item>
+                <item>
+                    <title>Healing</title>
+                    <value>75</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>85.5 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1.25 rounds per second</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>10</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.5 seconds</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>0.9 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </primary>
+            <skill1>
+                <name>Sleep Dart</name>
+                <description>Ana fires a dart from her sidearm, rendering an enemy unconscious (though
+                    any damage will rouse them).</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>5</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>5.5 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>12 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Biotic Grenade</name>
+                <description>Ana tosses a biotic bomb that deals damage to enemies and heals allies in
+                    a small area of effect. Affected allies briefly receive increased healing from all
+                    sources, while enemies caught in the blast cannot be healed for a few
+                    moments.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Arcing Splash Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>60</value>
+                </item>
+                <item>
+                    <title>Healing</title>
+                    <value>100 health</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>4 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>5 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Nano Boost</name>
+                <description>After Ana hits one of her allies with a combat boost, they temporarily move
+                    faster, deal more damage, and take less damage from enemies attacks.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Targeted Hitscan</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>+50%</value>
+                </item>
+                <item>
+                    <title>Damage Reduction</title>
+                    <value>-50%</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>8 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1650</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>20</id>
+                <nickname>Lucio</nickname>
+                <name>Lucio Correia dos Santos</name>
+                <height>5'3</height>
+                <age>26</age>
+                <difficulty>2</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Sonic Amplifier</name>
+                <description>Lucio can hit his enemies with sonic projectiles.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>16 per projectile</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>33.33 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>4 rounds per 0.5 seconds</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>20</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>4 rounds per shot</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.25 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Soundwave</name>
+                <description>Lucio can knock enemies back with a blast of
+                    sound.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Frontal Wave</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>25</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>8 meters</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>20</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>4 rounds per shot</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.25 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>4 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </secondary>
+            <passive>
+                <name>Wall Ride</name>
+                <description>Lucio rides along a wall. This has a slight upwards angle, allowing him
+                    to ascend the wall.</description>
+                <item>
+                    <title></title>
+                    <value></value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Crossfade</name>
+                <description>Lucio continuously energizes himself, and nearby teammates, with music.
+                    He can switch between two songs: one amplifies movement speed, while the other
+                    regenerates health.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>12.5 health per second</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>+30%</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>30 meters</value>
+                </item>
+                <item>
+                    <title>Charge Gained</title>
+                    <value>19 points per 15 healing</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Amp It Up</name>
+                <description>Lucio increases the volume on his speakers, boosting the effects of his
+                    songs.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>36 health per second</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>+70%</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>30 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>12 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Sound Barrier</name>
+                <description>Protective waves radiate out from Lucio's Sonic Amplifier, briefly
+                    providing him and nearby allies with personal shields.</description>
+                <item>
+                    <title>Health</title>
+                    <value>500 barrier</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>30 meters</value>
+                </item>
+                <item>
+                    <title>Casting Time</title>
+                    <value>0.8 seconds</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>2625</value>
+                </item>
+            </ultimate>
+        </hero>
+        <hero>
+            <basic>
+                <id>21</id>
+                <nickname>Mercy</nickname>
+                <name>Angela Ziegler</name>
+                <height>5'7</height>
+                <age>37</age>
+                <difficulty>1</difficulty>
+                <health>200</health>
+                <armor>0</armor>
+                <shield>0</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Caduceus Staff</name>
+                <description>Mercy engages one of two beams that connect to an ally. By maintaining
+                    the beams, she can either restore that ally's health or increase the amount of damage
+                    they deal.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Target Locked Beam</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>+30%</value>
+                </item>
+                <item>
+                    <title>Healing</title>
+                    <value>60 health per second</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>15 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Until cancelled</value>
+                </item>
+                <item>
+                    <title>Charge Gained</title>
+                    <value>4 points per 5 healing</value>
+                </item>
+                <item>
+                    <title>Charge Gained</title>
+                    <value>2 points per 3 damage</value>
+                </item>
+            </primary>
+            <passive>
+                <name>Angelic Descent</name>
+                <description>Propelled by her Valkyrie suit, Mercy slows the speed of her descent
+                    from great heights.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>20 health per second</value>
+                </item>
+            </passive>
+            <skill1>
+                <name>Gaurdian Angel</name>
+                <description>Mercy flies towards a targeted ally, allowing her to reach them quickly
+                    and provide assistance in crucial moments.</description>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>30 meters</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>2 seconds</value>
+                </item>
+            </skill1>
+            <ultimate>
+                <name>Resurrect</name>
+                <description>Mercy radiates restorative power, bringing nearby dead allies back into the
+                    fight with full health.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>Restores full health to fallen allies</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>15 meters</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>1 second cast time</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1625</value>
+                </item>
+            </ultimate>
+            <optional>
+                <name>Caduceus Blaster</name>
+                <description>Mercy shoots a round from her sidearm. It's best reserved for emergency
+                    personal defense.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>20</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>40 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>5 rounds per second</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>20</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1 second</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </optional>
+        </hero>
+        <hero>
+            <basic>
+                <id>22</id>
+                <nickname>Symmetra</nickname>
+                <name>Satya Vaswani</name>
+                <height>5'7</height>
+                <age>28</age>
+                <difficulty>2</difficulty>
+                <health>100</health>
+                <armor>0</armor>
+                <shield>100</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Photon Projecter</name>
+                <description>Symmetra's weapon emits a short-range beam that homes in on a nearby
+                    enemy, dealing continuous damage that increases the longer it is connected. The
+                    projector can also release a charged energy ball that deals high
+                    damage.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Homing Beam</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>7.5/15/30 per hit</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>5 meters</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>4 hits per second</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>100</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>7 per second</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.8 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Energy Ball</name>
+                <description>The projector can also release a charged energy ball that deals high
+                    damage.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Piercing Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>26 - 125</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>10 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>0.4 - 2 seconds</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>100</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>4 - 20</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>1.8 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Sentry Turret</name>
+                <description>Symmetra sets up a small turret that automatically fires speed-reducing
+                    blasts at the nearest enemy within range. Several turrets can be built on the
+                    battlefield at once.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Beam</value>
+                </item>
+                <item>
+                    <title>Health</title>
+                    <value>1</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>25 per second</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>10 meters</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>6</value>
+                </item>
+                <item>
+                    <title>Casting Time</title>
+                    <value>1.4 seconds</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>No</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Photon Barrier</name>
+                <description>Symmetra projects a moving barrier that absorbs damage as it travels forward.  </description>
+                <item>
+                    <title>Health</title>
+                    <value>1025</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>5.5 m/s</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>5 meter width</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Until Impact</value>
+                </item>
+                <item>
+                    <title>Cooldown</title>
+                    <value>10 seconds</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Teleporter</name>
+                <description>Symmetra places a teleporter exit pad at her current location, and connects
+                    it to a teleporter entry pad at her team's starting point. Allies can travel through
+                    the entry pad to the exit pad instantly, enabling them to return to the fight swiftly
+                    after being defeated.</description>
+                <item>
+                    <title>Health</title>
+                    <value>200</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>6 uses</value>
+                </item>
+                <item>
+                    <title>Casting Time</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Until destroyed or uses depleted</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1000</value>
+                </item>
+            </ultimate>
+            <optional>
+                <name>Shield Generator</name>
+                <description>Symmetra deploys a wide-radius generator that provides increased shielding to her entire team.</description>
+                <item>
+                    <title>Shield</title>
+                    <value>+75 shield</value>
+                </item>
+                <item>
+                    <title>Health</title>
+                    <value>400</value>
+                </item>
+                <item>
+                    <title>Area of Effect</title>
+                    <value>50 meters</value>
+                </item>
+                <item>
+                    <title>Casting Time</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>Until Destroyed</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>1000</value>
+                </item>
+            </optional>
+        </hero>
+        <hero>
+            <basic>
+                <id>23</id>
+                <nickname>Zenyatta</nickname>
+                <name>Tekhartha Zenyatta</name>
+                <height>5'8</height>
+                <age>20</age>
+                <difficulty>3</difficulty>
+                <health>50</health>
+                <armor>0</armor>
+                <shield>150</shield>
+                <total>200</total>
+            </basic>
+            <primary>
+                <name>Orb of Destruction</name>
+                <description>Zenyatta projects his destructive energy orbs either
+                    individually.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Linear Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>46</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>66.66 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>2.5 rounds per second</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>20</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </primary>
+            <secondary>
+                <name>Orb Volley</name>
+                <description>Zenyatta projects a rapid-fire volley after a few seconds spent
+                    gathering power.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Multiple Linear Projectiles</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>46 per orb</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>66.66 m/s</value>
+                </item>
+                <item>
+                    <title>Rate of Fire</title>
+                    <value>1.1 - 4 seconds</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>20</value>
+                </item>
+                <item>
+                    <title>Ammo Usage</title>
+                    <value>1 - 5 per volley</value>
+                </item>
+                <item>
+                    <title>Reload Time</title>
+                    <value>2 seconds</value>
+                </item>
+                <item>
+                    <title>Headshot</title>
+                    <value>Yes</value>
+                </item>
+            </secondary>
+            <skill1>
+                <name>Orb of Harmony</name>
+                <description>Zenyatta casts an orb over the shoulder of a targeted ally. So long as
+                    Zenyatta maintains line of sight, the orb slowly restores health to his ally. Only one
+                    ally can receive the orb's benefit at a time.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Targeted Homing Projectile</value>
+                </item>
+                <item>
+                    <title>Healing</title>
+                    <value>30 health per seconds</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>106.66 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>40 meters</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>One active</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 seconds out of sight</value>
+                </item>
+            </skill1>
+            <skill2>
+                <name>Orb of Discord</name>
+                <description>Attaching the orb of discord to an opponent amplifies the amount of
+                    damage they receive for as long as Zenyatta maintains line of sight. Only one opponent
+                    can suffer the orb's effects at a time.</description>
+                <item>
+                    <title>Type</title>
+                    <value>Targeted Homing Projectile</value>
+                </item>
+                <item>
+                    <title>Damage</title>
+                    <value>+30%</value>
+                </item>
+                <item>
+                    <title>Projectile Speed</title>
+                    <value>106.66 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>40 meters</value>
+                </item>
+                <item>
+                    <title>Ammo</title>
+                    <value>One active</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>3 seconds out of sight</value>
+                </item>
+            </skill2>
+            <ultimate>
+                <name>Transcendence</name>
+                <description>Zenyatta enters a state of heightened existence for a short period of time.
+                    While transcendent, Zenyatta cannot use abilities or weapons, but is immune to damage,
+                    moves twice as fast, and automatically restores his health and that of nearby
+                    allies.</description>
+                <item>
+                    <title>Healing</title>
+                    <value>300 health per second</value>
+                </item>
+                <item>
+                    <title>Movement Speed</title>
+                    <value>11 m/s</value>
+                </item>
+                <item>
+                    <title>Maximum Range</title>
+                    <value>10 meter radius</value>
+                </item>
+                <item>
+                    <title>Duration</title>
+                    <value>6 seconds</value>
+                </item>
+                <item>
+                    <title>Charge Required</title>
+                    <value>2075</value>
+                </item>
+            </ultimate>
+        </hero>        
+    </type>
+</heroes>

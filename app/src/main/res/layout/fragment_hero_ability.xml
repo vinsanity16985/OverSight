@@ -9,7 +9,7 @@
         android:padding="10dp"
         android:background="@drawable/ability_fragment_border"
         android:orientation="vertical"
-        tools:context="apps.vinsa_000.overwatchhelper.HeroAbilityFragment">
+        tools:context=".Fragments.HeroAbilityFragment">
 
         <TextView
             android:id="@+id/fragment_abilityTitle"
