@@ -13,6 +13,7 @@ import java.io.File;
 import apps.vinsa_000.overwatchhelper.Database.Database;
 import apps.vinsa_000.overwatchhelper.Database.DatabaseContract;
 import apps.vinsa_000.overwatchhelper.Database.DatabaseHelper;
+import apps.vinsa_000.overwatchhelper.Utils.NetworkUtils;
 import apps.vinsa_000.overwatchhelper.Utils.XMLParser;
 
 //TODO: Download XML from external site
@@ -20,7 +21,6 @@ public class SplashActivity extends AppCompatActivity {
 
     private static final String TAG = "SplashActivity";
 
-    private XMLParser parser;
     private Context context;
 
     @Override
@@ -28,14 +28,17 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         context = this;
 
-//        if(databaseExists()){
+        NetworkUtils network = new NetworkUtils(this);
+
+        boolean readyToParse = network.getSuccessfulDownload();
+
+        if(readyToParse){
             try{
                 Thread parsingThread = new Thread(new Runnable() {
                     @Override
                     public void run() {
                         try{
-                            parser = new XMLParser(context);
-                            parser.transferToCache();
+                            XMLParser parser = new XMLParser(context);
                             File xml = new File(getCacheDir().getPath() + File.separator + "cFile.xml");
                             Database db = new Database(context, parser.parse(xml));
                         }
@@ -51,7 +54,9 @@ public class SplashActivity extends AppCompatActivity {
             catch (Exception e){
                 e.printStackTrace();
             }
-//        }
+        }
+
+
 
 
         /*----------TEST READING VALUES----------*/
@@ -82,8 +87,8 @@ public class SplashActivity extends AppCompatActivity {
 
         /*--------------------*/
 
-//        Intent intent = new Intent(this, HomeActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
     }
 
     private boolean databaseExists(){

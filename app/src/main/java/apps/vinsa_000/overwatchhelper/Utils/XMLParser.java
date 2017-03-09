@@ -302,42 +302,6 @@ public class XMLParser {
             }
         }
 
-//        Hero h = heroList.get(11);//Torb
-//
-//        Log.d(TAG, "Name: " + h.getOptionalName());
-//        Log.d(TAG, "Description: " + h.getOptionalDescription());
-//        for(int i = 0; i < h.getOptionalLength(); i++){
-//            String title = h.getOptionalItem(i).getTitle();
-//            String value = h.getOptionalItem(i).getValue();
-//
-//            Log.d(TAG, "Item " + i + ": " + title + " | " + value);
-//        }
-
         return heroList;
-    }
-
-    public void transferToCache() throws IOException{
-        InputStream input = c.getResources().openRawResource(R.raw.restructuredheroes);
-        try{
-            File cacheFile = new File(c.getCacheDir(), "cFile.xml");
-            OutputStream output = new FileOutputStream(cacheFile);
-            try{
-                byte[] buffer = new byte[4 * 1024];
-                int read;
-
-                while((read = input.read(buffer)) != -1){
-                    output.write(buffer, 0, read);
-                }
-                output.flush();
-            }catch (Exception e){
-                e.printStackTrace();
-            }finally {
-                output.close();
-            }
-        }catch(Exception e){
-            e.printStackTrace();
-        }finally {
-            input.close();
-        }
     }
 }
